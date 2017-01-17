@@ -1,11 +1,12 @@
 {
     "manifest_version": 2,
     "content_scripts": [ {
-        "js":       [ "app.js" ],
-        "matches":  [ "https://*/*"]
+        "js": ["app.js"],
+        "css": ["style.css"],
+        "matches": ["https://*/*"]
     } ],
     "description": "Inject a complete, premade web page",
     "name": "Inject whole web page",
     "version": "1",
-    "web_accessible_resources": ["app.html"]
+    "web_accessible_resources": ["app.html", "style.css"]
 }

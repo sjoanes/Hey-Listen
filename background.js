@@ -133,7 +133,8 @@ function makeQuestion(cards) {
 	return {
 		hint: question.clue,
 		choices: options,
-		answer: options.indexOf(question.answer)
+		answer: options.indexOf(question.answer),
+		mnemonic: question.hint
 	};
 }
 

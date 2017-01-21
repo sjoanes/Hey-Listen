@@ -1,3 +1,7 @@
 .overlay {
   width: 50%;
 }
+
+#mnemonic {
+	display: none;
+}

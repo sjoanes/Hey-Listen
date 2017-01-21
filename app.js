@@ -1,7 +1,7 @@
 initialize();
 
 function initialize() {
-	var answerRef = {};
+	var answerRef = {attempts: 0};
 	injectHtmlOverlay();
 	injectCss();
 	addGlobalKeypressHandler(answerRef);
@@ -12,6 +12,7 @@ function initialize() {
 function updateDomWithQuestion(answerRef) {
 	chrome.runtime.sendMessage({action: "prompt"}, function(response) {
 		document.getElementById("fact").innerHTML = response.hint;
+		document.getElementById("mnemonic").innerHTML = response.mnemonic;
 
 		for (var i = 0; i < response.choices.length; i++) {
 			document.getElementById("btn" + i).innerHTML = response.choices[i];
@@ -29,6 +30,12 @@ function addGlobalKeypressHandler(answerRef) {
 					   event.keyCode === 102 ? 3 : 4;	// f (4 is never the answer)
 		if (adjusted === answerRef.answer) {
 			document.getElementById("hey-listen").style.display = "none";
+		} else {
+			answerRef.attempts++;
+		}
+
+		if (answerRef.attempts > 2) {
+			document.getElementById("mnemonic").style.display = "initial";
 		}
 	});
 }

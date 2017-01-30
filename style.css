@@ -1,7 +1,26 @@
-.overlay {
-  width: 50%;
+#hey-listen {
+	position: absolute;
+	left: 0px; top: 0px;
+	background-color: rgb(255, 255, 255);
+	z-index: 2000;
+	height: 3083px;
+	width: 100%;
+	overflow-y: hidden; 
 }
 
-#mnemonic {
-	display: none;
+#hey-listen .container {
+	text-align: center;
+}
+
+#hey-listen .fact {
+	padding: 40px;
+}
+
+#hey-listen #fact {
+	font-size: 50px;
+}
+
+#hey-listen button {
+	width: 24%;
+	padding: 10px;
 }

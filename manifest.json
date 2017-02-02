@@ -3,7 +3,7 @@
     "content_scripts": [ {
         "js": ["app.js"],
         "css": ["style.css"],
-        "matches": ["https://*/*"]
+        "matches": ["<all_urls>"]
     } ],
     "description": "Inject a complete, premade web page",
     "name": "Inject whole web page",

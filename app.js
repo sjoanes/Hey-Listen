@@ -6,6 +6,14 @@ function initialize() {
 	injectCss();
 	addGlobalKeypressHandler(answerRef);
 	updateDomWithQuestion(answerRef);
+	sapSetup(answerRef)
+}
+
+function sapSetup(answerRef) {
+	setInterval(function() {
+		updateDomWithQuestion(answerRef);
+		document.getElementById("hey-listen").style.display = "initial";
+	}, 10000);
 }
 
 // This will get a question from the background script and update the DOM
@@ -24,10 +32,10 @@ function updateDomWithQuestion(answerRef) {
 
 function addGlobalKeypressHandler(answerRef) {
 	document.addEventListener("keypress", function(event) {
-		var adjusted = event.keyCode === 97 ? 0 :     	// a
-					   event.keyCode === 115 ? 1 : 		// s
-					   event.keyCode === 100 ? 2 : 		// d
-					   event.keyCode === 102 ? 3 : 4;	// f (4 is never the answer)
+		var adjusted = event.keyCode === 65 ? 0 :     	// a
+					   event.keyCode === 83 ? 1 : 		// s
+					   event.keyCode === 68 ? 2 : 		// d
+					   event.keyCode === 70 ? 3 : 4;	// f (4 is never the answer)
 		if (adjusted === answerRef.answer) {
 			document.getElementById("hey-listen").style.display = "none";
 		} else {

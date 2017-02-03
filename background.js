@@ -66,40 +66,118 @@ var readings = [
 
 var meanings = [
 	{
-		clue: "年",
+		clue: "古",
 		type: MEANING,
-		answer: "year",
-		hint: "Every year it feels like guns are on top."
+		answer: "old",
+		hint: "Tombstone with a cross on top. 'Old' people die"
 	},
 	{
-		clue: "林",
+		clue: "吾",
 		type: MEANING,
-		answer: "forest",
-		hint: "Two trees = forest"
+		answer: "I",
+		hint: "'I' = the perceiving subject. Five senses are like five mouths. 2 nostrils, 2 ears and 1 mouth"
 	},
 	{
-		clue: "食",
+		clue: "冒",
 		type: MEANING,
-		answer: "food",
-		hint: "There's a woman in front of you. Who is she? It's just you and her in the store, and you're staring each other down. Oh. It turns out she's the store owner (onna), which is weird, because you are in a store that makes only manly things. A woman owner of a manly things store? Strange..."
+		answer: "risk",
+		hint: "Mom says don't look at the sun. But you gotta be 'risk'y. Sun above and an eye right below looking up."
 	},
 	{
-		clue: "車",
+		clue: "朋",
 		type: MEANING,
-		answer: "vehicle",
-		hint: "Its two lines because its two. Yep."
+		answer: "companion",
+		hint: "bible story of adam and eve. God thought Adam needed a companion so he made flesh of my flesh. 月 means flesh"
 	},
 	{
-		clue: "雨",
+		clue: "明",
 		type: MEANING,
-		answer: "rain",
-		hint: "Its two lines because its two. Yep."
+		answer: "bright",
+		hint: "Both the moon and the sun are the 'bright' things in the sky"
 	},
 	{
-		clue: "衣",
+		clue: "唱",
 		type: MEANING,
-		answer: "garment",
-		hint: "It looks like a tree. See the roots on the bottom and the branches?"
+		answer: "chant",
+		hint: "One mouth making no noise aka the choirmaster. Two mouths with wagging tongues because they are 'chanting'"
+	},
+	{
+		clue: "晶",
+		type: MEANING,
+		answer: "sparkle",
+		hint: "A diamond 'sparkles' when you hold it up to the light (like the sun). The sparkles are like little light sources. A picture of a tiny sun in three places."
+	},
+	{
+		clue: "品",
+		type: MEANING,
+		answer: "goods",
+		hint: "When we think of 'goods' in a modern industrial society, we think of what has been mass produced. Produced for the masses to consume like fledglings in a nest with open beaks."
+	},
+	{
+		clue: "呂",
+		type: MEANING,
+		answer: "spine",
+		hint: "This is like a picture of two vertebrae in the spine linked by a single stroke"
+	},
+	{
+		clue: "昌",
+		type: MEANING,
+		answer: "propersous",
+		hint: "If we had two suns we could yield twice the crops (to be more 'prosperous')"
+	},
+	{
+		clue: "早",
+		type: MEANING,
+		answer: "early",
+		hint: "First flower of the day to rise. the sunflower is the early riser in the garden. Sunflowers know how to sun"
+	},
+	{
+		clue: "旭",
+		type: MEANING,
+		answer: "Japan is the land of the 'rising sun'. Imagine baseball and the red sun?",
+
+	},
+	{
+		clue: "世",
+		type: MEANING,
+		answer: "generation",
+		hint: "A generation is thirty years. This kanji has 3 tens. ten plus ten plus ten"
+	},
+	{
+		clue: "胃",
+		type: MEANING,
+		answer: "stomach",
+		hint: "The part of the body that keeps the brain working"
+	},
+	{
+		clue: "旦",
+		type: MEANING,
+		answer: "nightbreak",
+		hint: "The sun is peaking out of the horizon, aka the night is breaking."
+	},
+	{
+		clue: "胆",
+		type: MEANING,
+		answer: "gall bladder",
+		hint: "The left is a part of the body. The right is nightbreak. Don't let the night break on your anger (anger === bile == gall blader)"
+	},
+	{
+		clue: "亘",
+		type: MEANING,
+		answer: "span",
+		hint: "Sun going from one side of the horizon to the other. It is 'spanning' the day"
+	},
+	{
+		clue: "凹",
+		type: MEANING,
+		answer: "concave",
+		hint: "Yo this shit is concave"
+	},
+	{
+		clue: "凸 ",
+		type: MEANING,
+		answer: "convex",
+		hint: "Yo this shit is convex"
 	}
 ];
 

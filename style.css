@@ -17,16 +17,18 @@
 }
 
 #hey-listen #fact {
-	font-size: 50px;
+	font-size: 250px;
 	color: black;
 }
 
 #hey-listen button {
 	width: 24%;
+	font-size: 20px;
 	padding: 10px;
 	color: black;
 }
 
 #hey-listen #mnemonic {
 	display: none;
+	color: black;
 }

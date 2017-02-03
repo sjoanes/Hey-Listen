@@ -61,6 +61,121 @@ var readings = [
 		type: READING,
 		answer: "たけ",
 		hint: 'You’re walking through the trees, looking at them. They look ominous. Then, your foot gets stuck in the muck (mock) and you try to pull your leg out, but can’t. Then the trees next to you beginning to "mock" you. '
+	},
+		{
+		clue: "古",
+		type: READING,
+		answer: "ふる",
+		hint: "furu"
+	},
+	{
+		clue: "吾",
+		type: READING,
+		answer: "わが",
+		hint: "'I' = the perceiving subject. Five senses are like five mouths. 2 nostrils, 2 ears and 1 mouth"
+	},
+	{
+		clue: "冒",
+		type: READING,
+		answer: "ぼう",
+		hint: "You draw your 'bow' straight up because you going to take down the sun."
+	},
+	{
+		clue: "朋",
+		type: READING,
+		answer: "ほう",
+		hint: "Flesh of my flesh is another name for my 'ho'"
+	},
+	{
+		clue: "明",
+		type: READING,
+		answer: "あか",
+		hint: "aka chan is a source of light for the future. Light is bright."
+	},
+	{
+		clue: "唱",
+		type: READING,
+		answer: "しょう",
+		hint: "You came to the 'show' to hear the people chant zelda opening"
+	},
+	{
+		clue: "晶",
+		type: READING,
+		answer: "しょう",
+		hint: "Where else would you see three crystals sparkling together, its a crystal show"
+	},
+	{
+		clue: "品",
+		type: READING,
+		answer: "ひん",
+		hint: "Zombie apocalypse, we need to stockpile goods. Anyone who is a 'hin'drance won't get any"
+	},
+	{
+		clue: "呂",
+		type: READING,
+		answer: "りょ",
+		hint: "Put your back into 'row'ing. Back = spine, dont question it"
+	},
+	{
+		clue: "昌",
+		type: READING,
+		answer: "さかん",
+		hint: "If you are prosperous, you are 'sakan'd to none"
+	},
+	{
+		clue: "早",
+		type: READING,
+		answer: "はや",
+		hint: "You know this one"
+	},
+	{
+		clue: "旭",
+		type: READING,
+		answer: "あさひ",
+		hint: "あさひ is morning sun",
+
+	},
+	{
+		clue: "世",
+		type: READING,
+		answer: "せ",
+		hint: "You need to have se-x to create the next generation"
+	},
+	{
+		clue: "胃",
+		type: READING,
+		answer: "い",
+		hint: "I have a stomach"
+	},
+	{
+		clue: "旦",
+		type: READING,
+		answer: "あき",
+		hint: "Aki dyu not, the earth revovles around the sun"
+	},
+	{
+		clue: "胆",
+		type: READING,
+		answer: "きも",
+		hint: "Too much anger, you got gall bladder cancer. You need to do kimo"
+	},
+	{
+		clue: "亘",
+		type: READING,
+		answer: "わたる",
+		hint: "Spanning four years at Wataru(Waterloo)"
+	},
+	{
+		clue: "凹",
+		type: READING,
+		answer: "くぼ",
+		hint: "Kubo the movie is deep like a bowl"
+	},
+	{
+		clue: "凸",
+		type: READING,
+		answer: "でこ",
+		hint: "deko rate the area with pelvic thrusts"
 	}
 ];
 
@@ -153,14 +268,14 @@ var meanings = [
 	{
 		clue: "旦",
 		type: MEANING,
-		answer: "nightbreak",
+		answer: "daybreak",
 		hint: "The sun is peaking out of the horizon, aka the night is breaking."
 	},
 	{
 		clue: "胆",
 		type: MEANING,
 		answer: "gall bladder",
-		hint: "The left is a part of the body. The right is nightbreak. Don't let the night break on your anger (anger === bile == gall blader)"
+		hint: "The left is a part of the body. The right is daybreak. Don't let the day break on your anger (anger === bile == gall blader)"
 	},
 	{
 		clue: "亘",

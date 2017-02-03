@@ -26,3 +26,7 @@
 	padding: 10px;
 	color: black;
 }
+
+#hey-listen #mnemonic {
+	display: none;
+}

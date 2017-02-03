@@ -134,7 +134,8 @@ var meanings = [
 	{
 		clue: "旭",
 		type: MEANING,
-		answer: "Japan is the land of the 'rising sun'. Imagine baseball and the red sun?",
+		answer: "rising sun",
+		hint: "Japan is the land of the 'rising sun'. Imagine baseball and the red sun?",
 
 	},
 	{

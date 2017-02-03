@@ -6,11 +6,10 @@ function initialize() {
 	injectCss();
 	addGlobalKeypressHandler(answerRef);
 	updateDomWithQuestion(answerRef);
-	sapSetup(answerRef)
 }
 
-function sapSetup(answerRef) {
-	setInterval(function() {
+function annoy(answerRef) {
+	setTimeout(function() {
 		updateDomWithQuestion(answerRef);
 		document.getElementById("hey-listen").style.display = "initial";
 	}, 10000);
@@ -19,6 +18,7 @@ function sapSetup(answerRef) {
 // This will get a question from the background script and update the DOM
 function updateDomWithQuestion(answerRef) {
 	chrome.runtime.sendMessage({action: "prompt"}, function(response) {
+		document.getElementById("hey-listen").focus()
 		document.getElementById("fact").innerHTML = response.hint;
 		document.getElementById("mnemonic").innerHTML = response.mnemonic;
 
@@ -38,7 +38,10 @@ function addGlobalKeypressHandler(answerRef) {
 					   event.keyCode === 70 ? 3 : 4;	// f (4 is never the answer)
 		if (adjusted === answerRef.answer) {
 			document.getElementById("hey-listen").style.display = "none";
-		} else {
+			document.getElementById("mnemonic").style.display = "none";
+			annoy(answerRef)
+			answerRef.attempts = 0;
+		} else if (adjusted < 4) {
 			answerRef.attempts++;
 		}
 

@@ -176,6 +176,78 @@ var readings = [
 		type: READING,
 		answer: "でこ",
 		hint: "deko rate the area with pelvic thrusts"
+	},
+	{
+		clue: "生",
+		type: READING,
+		answer: "う",
+		hint: 'Looks like a flower being born, "u"guu its so cute'
+	},
+	{
+		clue: "休",
+		type: READING,
+		answer: "やす",
+		hint: 'Person resting besides a tree, yasumi == rest'
+	},
+	{
+		clue: "先",
+		type: READING,
+		answer: "せん",
+		hint: "If you are a cow with legs, you have a'sen'cended"
+	},
+	{
+		clue: "字",
+		type: READING,
+		answer: "じ",
+		hint: "If you learn all the kanji characters, you're a straight GEE"
+	},
+	{
+		clue: "子",
+		type: READING,
+		answer: "こ",
+		hint: "ko"
+	},
+	{
+		clue: "気",
+		type: READING,
+		answer: "き",
+		hint: "Gen KI"
+	},
+	{
+		clue: "糸",
+		type: READING,
+		answer: "いと",
+		hint: "ito-u senpai threads together beautiful comics at the spine"
+	},
+	{
+		clue: "耳",
+		type: READING,
+		answer: "みみ",
+		hint: "Slanted eye is an ear. Mimi = ear"
+	},
+	{
+		clue: "村",
+		type: READING,
+		answer: "むら",
+		hint: "hana 'mura' is a nice village where I like to get owned by zenyatta"
+	},
+	{
+		clue: "赤",
+		type: READING,
+		answer: "あか",
+		hint: "Aka chan is the pygmy, used lord soul to create fire and humans"
+	},
+	{
+		clue: "足",
+		type: READING,
+		answer: "あし",
+		hint: "Ashiiiiet, I stepped on a spider"
+	},
+	{
+		clue: "花",
+		type: READING,
+		answer: "はな",
+		hint: "Flowers have petals on the top of the stem. They change most noticeably"
 	}
 ];
 
@@ -294,6 +366,78 @@ var meanings = [
 		type: MEANING,
 		answer: "convex",
 		hint: "Yo this shit is convex"
+	},
+	{
+		clue: "生",
+		type: READING,
+		answer: "life",
+		hint: 'Life is like a cow standing on the ground. The ground is Mississauga'
+	},
+	{
+		clue: "休",
+		type: READING,
+		answer: "rest",
+		hint: 'Person resting besides a tree, yasumi == rest'
+	},
+	{
+		clue: "先",
+		type: READING,
+		answer: "ahead",
+		hint: "If you are a cow with legs, you have a'sen'cended. Ahead of the population"
+	},
+	{
+		clue: "字",
+		type: READING,
+		answer: "character",
+		hint: "Review and study of the characters: a child's子 most important home宀 work"
+	},
+	{
+		clue: "子",
+		type: READING,
+		answer: "child",
+		hint: "The head and arms of a child. You don't need to both with legs because its just a child, they don't have legs."
+	},
+	{
+		clue: "気",
+		type: READING,
+		answer: "spirit",
+		hint: "Backwards square root of me? Thats spirit"
+	},
+	{
+		clue: "糸",
+		type: READING,
+		answer: "thread",
+		hint: "ito-u senpai 'thread's together beautiful comics at the spine"
+	},
+	{
+		clue: "耳",
+		type: READING,
+		answer: "ear",
+		hint: "Slanted eye is an ear. Mimi = ear"
+	},
+	{
+		clue: "村",
+		type: READING,
+		answer: "village",
+		hint: "hanamura is a nice 'village' where I like to get owned by zenyatta"
+	},
+	{
+		clue: "赤",
+		type: READING,
+		answer: "red",
+		hint: "From earth and fire. Aka chan is the pygmy, used lord soul to create fire and humans. Fire is red"
+	},
+	{
+		clue: "足",
+		type: READING,
+		answer: "foot",
+		hint: "Ashiiiiet, I stepped on a spider with my 'foot'"
+	},
+	{
+		clue: "花",
+		type: READING,
+		answer: "flower",
+		hint: "Flowers have petals on the top of the stem. They change most noticeably"
 	}
 ];
 

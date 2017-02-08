@@ -162,7 +162,7 @@ var readings = [
 	{
 		clue: "亘",
 		type: READING,
-		answer: "わたる",
+		answer: "わた",
 		hint: "Spanning four years at Wataru(Waterloo)"
 	},
 	{
@@ -278,6 +278,12 @@ var readings = [
 		type: READING,
 		answer: "くさ",
 		hint: "kusa, I got a grass stain"
+	},
+	{
+		clue: "良",
+		type: READING,
+		answer: "よ",
+		hint: "yo this is sooooo good"
 	}
 ];
 
@@ -498,6 +504,12 @@ var meanings = [
 		type: MEANING,
 		answer: "grass",
 		hint: "Grasses (top part) growing plentifully 十 under the sun 日"
+	},
+	{
+		clue: "良",
+		type: READING,
+		answer: "good",
+		hint: "Eating without a roof is dah bes"
 	}
 ];
 

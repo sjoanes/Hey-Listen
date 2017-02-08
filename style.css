@@ -1,7 +1,7 @@
 #hey-listen {
 	position: absolute;
 	left: 0px; top: 0px;
-	background-color: rgb(255, 255, 255);
+	background-color: #00aaff;
 	z-index: 2000;
 	height: 3083px;
 	width: 100%;
@@ -18,17 +18,25 @@
 
 #hey-listen #fact {
 	font-size: 250px;
-	color: black;
+	color: #ffffff;
+    text-shadow: 5px 2px 0px #282222;
 }
 
 #hey-listen button {
 	width: 24%;
 	font-size: 20px;
 	padding: 10px;
-	color: black;
+	color: #ffffff;
+	background-color: #00bbff;
+    border: 1px solid transparent;
+    border-radius: 14px;
+}
+
+#hey-listen button:hover { 
+    background-color: #00a0ff;
 }
 
 #hey-listen #mnemonic {
 	display: none;
-	color: black;
+	color: #ffffff;
 }

@@ -58,13 +58,6 @@ function injectHtmlOverlay() {
 	xhttp.send();
 	wrapper.innerHTML = xhttp.responseText;
 	wrapper.setAttribute("id", "hey-listen")
-	wrapper.setAttribute("style",
-		"position: absolute;" +
-		" left: 0px; top: 0px;" +
-		" background-color: rgb(255, 255, 255); " +
-		" z-index: 2000;" +
-		" height: 1083px;" +
-		" width: 100%;");
 	document.body.insertBefore(wrapper, document.body.firstChild);
 }
 

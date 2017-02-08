@@ -248,6 +248,36 @@ var readings = [
 		type: READING,
 		answer: "はな",
 		hint: "Flowers have petals on the top of the stem. They change most noticeably"
+	},
+	{
+		clue: "音",
+		type: READING,
+		answer: "おん",
+		hint: "Stand ON the sun"
+	},
+	{
+		clue: "校",
+		type: READING,
+		answer: "こう",
+		hint: "Big tree 木 in the village center where people interact 交 and where children attend school. What a cuuuul tree"
+	},
+	{
+		clue: "交",
+		type: READING,
+		answer: "まじ",
+		hint: "Several 六 roads crossing X. Its maji-k that no one is crashing"
+	},
+	{
+		clue: "森",
+		type: READING,
+		answer: "もり",
+		hint: "Mori summer smokes a lot of trees(Everyday)"
+	},
+	{
+		clue: "草",
+		type: READING,
+		answer: "くさ",
+		hint: "kusa, I got a grass stain"
 	}
 ];
 
@@ -369,79 +399,109 @@ var meanings = [
 	},
 	{
 		clue: "生",
-		type: READING,
+		type: MEANING,
 		answer: "life",
 		hint: 'Life is like a cow standing on the ground. The ground is Mississauga'
 	},
 	{
 		clue: "休",
-		type: READING,
+		type: MEANING,
 		answer: "rest",
 		hint: 'Person resting besides a tree, yasumi == rest'
 	},
 	{
 		clue: "先",
-		type: READING,
+		type: MEANING,
 		answer: "ahead",
 		hint: "If you are a cow with legs, you have a'sen'cended. Ahead of the population"
 	},
 	{
 		clue: "字",
-		type: READING,
+		type: MEANING,
 		answer: "character",
 		hint: "Review and study of the characters: a child's子 most important home宀 work"
 	},
 	{
 		clue: "子",
-		type: READING,
+		type: MEANING,
 		answer: "child",
 		hint: "The head and arms of a child. You don't need to both with legs because its just a child, they don't have legs."
 	},
 	{
 		clue: "気",
-		type: READING,
+		type: MEANING,
 		answer: "spirit",
 		hint: "Backwards square root of me? Thats spirit"
 	},
 	{
 		clue: "糸",
-		type: READING,
+		type: MEANING,
 		answer: "thread",
 		hint: "ito-u senpai 'thread's together beautiful comics at the spine"
 	},
 	{
 		clue: "耳",
-		type: READING,
+		type: MEANING,
 		answer: "ear",
 		hint: "Slanted eye is an ear. Mimi = ear"
 	},
 	{
 		clue: "村",
-		type: READING,
+		type: MEANING,
 		answer: "village",
 		hint: "hanamura is a nice 'village' where I like to get owned by zenyatta"
 	},
 	{
 		clue: "赤",
-		type: READING,
+		type: MEANING,
 		answer: "red",
 		hint: "From earth and fire. Aka chan is the pygmy, used lord soul to create fire and humans. Fire is red"
 	},
 	{
 		clue: "足",
-		type: READING,
+		type: MEANING,
 		answer: "foot",
 		hint: "Ashiiiiet, I stepped on a spider with my 'foot'"
 	},
 	{
 		clue: "花",
-		type: READING,
+		type: MEANING,
 		answer: "flower",
 		hint: "Flowers have petals on the top of the stem. They change most noticeably"
+	},
+	{
+		clue: "音",
+		type: MEANING,
+		answer: "sound",
+		hint: "Stand ON the sun"
+	},
+	{
+		clue: "校",
+		type: MEANING,
+		answer: "school",
+		hint: "Big tree 木 in the village center where people interact 交 and where children attend school"
+	},
+	{
+		clue: "交",
+		type: MEANING,
+		answer: "interchange",
+		hint: "Several 六 roads crossing X"
+	},
+	{
+		clue: "森",
+		type: MEANING,
+		answer: "forest",
+		hint: "Mori SUMMER smokes a lot of trees(Everyday)"
+	},
+	{
+		clue: "草",
+		type: MEANING,
+		answer: "grass",
+		hint: "Grasses (top part) growing plentifully 十 under the sun 日"
 	}
 ];
 
-var cards = [meanings, readings];
+var cards = [shuffle(meanings), shuffle(readings)];
 
 function shuffle(a) {
     var j, x, i;

@@ -1,42 +1,60 @@
 #hey-listen {
-	position: absolute;
-	left: 0px; top: 0px;
-	background-color: #00aaff;
-	z-index: 2000;
-	height: 3083px;
-	width: 100%;
-	overflow-y: hidden; 
+    height: 3083px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2000;
+    background-color: #42A5F5;
+    font-family: "Roboto", sans-serif;
+    overflow-y: hidden;
 }
 
 #hey-listen .container {
-	text-align: center;
+    text-align: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+#hey-listen .fact, #hey-listen #answers button {
+    background-color: #2196F3;
 }
 
 #hey-listen .fact {
-	padding: 40px;
+    margin: 40px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+#hey-listen #answers {
+    margin: 20px 40px;
 }
 
 #hey-listen #fact {
-	font-size: 250px;
-	color: #ffffff;
+    font-size: 250px;
+    color: #ffffff;
     text-shadow: 5px 2px 0px #282222;
 }
 
-#hey-listen button {
-	width: 24%;
-	font-size: 20px;
-	padding: 10px;
-	color: #ffffff;
-	background-color: #00bbff;
-    border: 1px solid transparent;
-    border-radius: 14px;
+#hey-listen #answers button {
+    width: 23%;
+    padding: 15px;
+    margin-right: 2%;
+    font-size: 20px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    transition: box-shadow 0.1s;
 }
 
-#hey-listen button:hover { 
-    background-color: #00a0ff;
+#hey-listen #answers button:last-child {
+    margin-right: 0;
+}
+
+#hey-listen #answers button:hover {
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
 }
 
 #hey-listen #mnemonic {
-	display: none;
-	color: #ffffff;
+    display: none;
+    color: #ffffff;
 }

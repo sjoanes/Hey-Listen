@@ -284,6 +284,24 @@ var readings = [
 		type: READING,
 		answer: "よ",
 		hint: "yo this is sooooo good"
+	},
+	{
+		clue: "弓",
+		type: READING,
+		answer: "きゅう",
+		hint: "Noire is an archer with a bow. What kyuutie."
+	},
+	{
+		clue: "光",
+		type: READING,
+		answer: "ひか",
+		hint: "Like a splendid diamond shining on a pi pedestal. Hika cup and the boulder will start rolling"
+	},
+	{
+		clue: "毎",
+		type: READING,
+		answer: "まい",
+		hint: "MAI is dad's mom, EVERYone has a mom."
 	}
 ];
 

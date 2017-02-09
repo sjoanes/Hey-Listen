@@ -4,7 +4,7 @@ function initialize() {
 	var answerRef = {attempts: 0};
 	injectHtmlOverlay();
 	injectCss();
-	addGlobalKeypressHandler(answerRef);
+	addInputHandlers(answerRef);
 	updateDomWithQuestion(answerRef);
 }
 
@@ -30,24 +30,41 @@ function updateDomWithQuestion(answerRef) {
 	});
 }
 
-function addGlobalKeypressHandler(answerRef) {
+function makeAttempt(guess, answerRef) {
+	if (guess === answerRef.answer) {
+		document.getElementById("hey-listen").style.display = "none";
+		document.getElementById("mnemonic").style.display = "none";
+		annoy(answerRef)
+		answerRef.attempts = 0;
+	} else if (guess < 4) {
+		answerRef.attempts++;
+	}
+
+	if (answerRef.attempts > 2) {
+		document.getElementById("mnemonic").style.display = "initial";
+	}
+}
+
+function addInputHandlers(answerRef) {
 	document.addEventListener("keypress", function(event) {
 		var adjusted = event.keyCode === 65 ? 0 :     	// a
 					   event.keyCode === 83 ? 1 : 		// s
 					   event.keyCode === 68 ? 2 : 		// d
 					   event.keyCode === 70 ? 3 : 4;	// f (4 is never the answer)
-		if (adjusted === answerRef.answer) {
-			document.getElementById("hey-listen").style.display = "none";
-			document.getElementById("mnemonic").style.display = "none";
-			annoy(answerRef)
-			answerRef.attempts = 0;
-		} else if (adjusted < 4) {
-			answerRef.attempts++;
-		}
+		makeAttempt(adjusted, answerRef);
+	});
 
-		if (answerRef.attempts > 2) {
-			document.getElementById("mnemonic").style.display = "initial";
-		}
+	for (var i = 0; i < 4; i++) {
+		var btn = document.getElementById("btn" + i);
+		function closure(i) { return function() { makeAttempt(i, answerRef); } }
+		btn.addEventListener("click", closure(i));
+	}
+	document.addEventListener("keypress", function(event) {
+		var adjusted = event.keyCode === 65 ? 0 :     	// a
+					   event.keyCode === 83 ? 1 : 		// s
+					   event.keyCode === 68 ? 2 : 		// d
+					   event.keyCode === 70 ? 3 : 4;	// f (4 is never the answer)
+		makeAttempt(adjusted, answerRef);
 	});
 }
 

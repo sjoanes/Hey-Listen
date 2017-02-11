@@ -8,7 +8,8 @@
     "description": "Inject a complete, premade web page",
     "name": "Inject whole web page",
     "version": "1",
-    "web_accessible_resources": ["app.html", "style.css"],
+    "web_accessible_resources": ["app.html", "style.css", "options.js"],
+    "options_page": "options.html",
     "background": {
         "scripts": ["background.js"]
     }

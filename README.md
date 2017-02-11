@@ -2,12 +2,11 @@
 
 Gamify other people's websites using a chrome extension.
 
-# TODO #
-Note that numbering does not indicate any type of priority
-1. make the buttons clickable
-2. Doesn't seems to overlay on all website properly
-3. Add styling
-5. Use flash cards I don't already know
-6. track progress
-7. make the ids unique via namespace
-8. Possible to make focus the page instead of tab on new tab
+# Todo
+
+1. Create a priority of questions based on user performance with the question. Should generally follow rule, if you answer something incorrectly, you will see that questions again BEFORE questions you answered perfectly.
+2. Tweak css more
+3. Add more radicals possibly have dependencies in the priority list
+4. Improve hint quality. non-Savio specific and complete
+5. Make the interval adjustable through UI
+6. Make the affected websites adjustable through UI

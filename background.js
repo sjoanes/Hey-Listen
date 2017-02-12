@@ -392,6 +392,24 @@ var readings = [
 		type: READING,
 		answer: "み",
 		hint: "Dont touch mi body"
+	},
+	{
+		clue: "知",
+		type: READING,
+		answer: "し",
+		hint: "Shiiii, dont put that arrow in your mouth. Its been in koichi's neck"
+	},
+	{
+		clue: "顔",
+		type: READING,
+		answer: "かお",
+		hint: "See the guy standing? Does he have a shellfish with eyes, thus have a face?"
+	},
+	{
+		clue: "舌",
+		type: READING,
+		answer: "した",
+		hint: "In a rimjob, you put a tongue in someones shita"
 	}
 ];
 

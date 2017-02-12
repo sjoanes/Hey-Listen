@@ -302,6 +302,96 @@ var readings = [
 		type: READING,
 		answer: "まい",
 		hint: "MAI is dad's mom, EVERYone has a mom."
+	},
+	{
+		clue: "開",
+		type: READING,
+		answer: "あ",
+		hint: "Open your mouth, aaaaah. Theres a mini gate in between the gate"
+	},
+	{
+		clue: "柔",
+		type: READING,
+		answer: "やわ",
+		hint: "Kawa halberd is soooft"
+	},
+	{
+		clue: "以",
+		type: READING,
+		answer: "も",
+		hint: "Spades are mo than enter"
+	},
+	{
+		clue: "射",
+		type: READING,
+		answer: "い",
+		hint: "Inch to aim for the head on the body"
+	},
+	{
+		clue: "安",
+		type: READING,
+		answer: "やす",
+		hint: "Woman with a hat looking for the cheap deals"
+	},
+	{
+		clue: "穴",
+		type: READING,
+		answer: "あな",
+		hint: "Put a hat on that hole, hole == ana"
+	},
+	{
+		clue: "倍",
+		type: READING,
+		answer: "ばい",
+		hint: "Person standing on a mouth so they don't have to say bai"
+	},
+	{
+		clue: "乳",
+		type: READING,
+		answer: "にゅう",
+		hint: "Use a new hook when you learning to fish on the ground"
+	},
+	{
+		clue: "尻",
+		type: READING,
+		answer: "しり",
+		hint: "I wave a flag for 9 things, its all ass"
+	},
+	{
+		clue: "猫",
+		type: READING,
+		answer: "ねこ",
+		hint: "Whiskers and rice fields, rice is white, cats are white"
+	},
+	{
+		clue: "初",
+		type: READING,
+		answer: "はじ",
+		hint: "Ne sword is the FIRST thing you want to collect"
+	},
+	{
+		clue: "舐",
+		type: READING,
+		answer: "ね",
+		hint: "Neh"
+	},
+	{
+		clue: "狭",
+		type: READING,
+		answer: "せま",
+		hint: "Sema"
+	},
+	{
+		clue: "鳴",
+		type: READING,
+		answer: "な",
+		hint: "Cries come out of birds mouth"
+	},
+	{
+		clue: "身",
+		type: READING,
+		answer: "み",
+		hint: "Dont touch mi body"
 	}
 ];
 

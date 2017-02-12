@@ -9,4 +9,4 @@ Gamify other people's websites using a chrome extension.
 3. Add more radicals possibly have dependencies in the priority list
 4. Improve hint quality. non-Savio specific and complete
 5. Make the interval adjustable through UI
-6. Make the affected websites adjustable through UI
+6. Auto vertically-center the question

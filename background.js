@@ -568,6 +568,11 @@ function makeQuestion(cards) {
 
 chrome.runtime.onMessage.addListener(
  	function(request, sender, sendResponse) {
-      sendResponse(makeQuestion(cards));
+ 		console.log(request)
+ 		if (request.action === "prompt") {
+		    sendResponse(makeQuestion(cards));
+ 		} else if (request.action === "blacklist") {
+ 			sendResponse(localStorage.getItem("blacklist"));
+ 		}
 	}
 );

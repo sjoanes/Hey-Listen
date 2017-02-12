@@ -1,11 +1,17 @@
 initialize();
 
 function initialize() {
-	var answerRef = {attempts: 0};
-	injectHtmlOverlay();
-	injectCss();
-	addInputHandlers(answerRef);
-	updateDomWithQuestion(answerRef);
+	chrome.runtime.sendMessage({action: "blacklist"}, function(response) {
+		if (new RegExp(response, "i").test(window.location.href)) {
+			return;
+		}
+
+		var answerRef = {attempts: 0};
+		injectHtmlOverlay();
+		injectCss();
+		addInputHandlers(answerRef);
+		updateDomWithQuestion(answerRef);
+	});
 }
 
 function annoy(answerRef) {

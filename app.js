@@ -1,8 +1,8 @@
 initialize();
 
 function initialize() {
-	chrome.runtime.sendMessage({action: "blacklist"}, function(response) {
-		if (new RegExp(response, "i").test(window.location.href)) {
+	chrome.runtime.sendMessage({action: "whitelist"}, function(response) {
+		if (!(new RegExp(response, "i").test(window.location.href))) {
 			return;
 		}
 

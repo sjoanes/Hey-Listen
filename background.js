@@ -313,7 +313,7 @@ var readings = [
 		clue: "柔",
 		type: READING,
 		answer: "やわ",
-		hint: "Kawa halberd is soooft"
+		hint: "Kawai halberd is soooft"
 	},
 	{
 		clue: "以",
@@ -661,8 +661,8 @@ chrome.runtime.onMessage.addListener(
  		console.log(request)
  		if (request.action === "prompt") {
 		    sendResponse(makeQuestion(cards));
- 		} else if (request.action === "blacklist") {
- 			sendResponse(localStorage.getItem("blacklist"));
+ 		} else if (request.action === "whitelist") {
+ 			sendResponse(localStorage.getItem("whitelist"));
  		}
 	}
 );

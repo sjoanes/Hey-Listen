@@ -1,10 +1,10 @@
 function getBL() {
-	return document.getElementById("blacklist");
+	return document.getElementById("whitelist");
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-	getBL().value = localStorage.getItem('blacklist') || '*';
+	getBL().value = localStorage.getItem('whitelist') || '.*';
 	document.getElementById("save").addEventListener('click', function() {
-		localStorage.setItem('blacklist', getBL().value)
+		localStorage.setItem('whitelist', getBL().value)
 	});
 });

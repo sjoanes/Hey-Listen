@@ -65,13 +65,6 @@ function addInputHandlers(answerRef) {
 		function closure(i) { return function() { makeAttempt(i, answerRef); } }
 		btn.addEventListener("click", closure(i));
 	}
-	document.addEventListener("keypress", function(event) {
-		var adjusted = event.keyCode === 65 ? 0 :     	// a
-					   event.keyCode === 83 ? 1 : 		// s
-					   event.keyCode === 68 ? 2 : 		// d
-					   event.keyCode === 70 ? 3 : 4;	// f (4 is never the answer)
-		makeAttempt(adjusted, answerRef);
-	});
 }
 
 function injectHtmlOverlay() {

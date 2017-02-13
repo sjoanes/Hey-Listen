@@ -24,43 +24,43 @@ var readings = [
 		clue: "雨",
 		type: READING,
 		answer: "あめ",
-		hint: 'You’re walking through the trees, looking at them. They look ominous. Then, your foot gets stuck in the muck (mock) and you try to pull your leg out, but can’t. Then the trees next to you beginning to "mock" you. '
+		hint: 'The ticks are rain'
 	},
 	{
 		clue: "長",
 		type: READING,
 		answer: "なが",
-		hint: 'You’re walking through the trees, looking at them. They look ominous. Then, your foot gets stuck in the muck (mock) and you try to pull your leg out, but can’t. Then the trees next to you beginning to "mock" you. '
+		hint: 'The naga have long tails'
 	},
 	{
 		clue: "夕",
 		type: READING,
 		answer: "ゆう",
-		hint: 'You’re walking through the trees, looking at them. They look ominous. Then, your foot gets stuck in the muck (mock) and you try to pull your leg out, but can’t. Then the trees next to you beginning to "mock" you. '
+		hint: 'yuu are the bes '
 	},
 	{
 		clue: "名",
 		type: READING,
 		answer: "めい",
-		hint: 'You’re walking through the trees, looking at them. They look ominous. Then, your foot gets stuck in the muck (mock) and you try to pull your leg out, but can’t. Then the trees next to you beginning to "mock" you. '
+		hint: 'Who is that standing on the ice wall? Its Mei'
 	},
 	{
 		clue: "文 ",
 		type: READING,
 		answer: "ぶん",
-		hint: 'You’re walking through the trees, looking at them. They look ominous. Then, your foot gets stuck in the muck (mock) and you try to pull your leg out, but can’t. Then the trees next to you beginning to "mock" you. '
+		hint: 'That doll has a "bun" hair style'
 	},
 	{
 		clue: "町",
 		type: READING,
 		answer: "まち",
-		hint: 'You’re walking through the trees, looking at them. They look ominous. Then, your foot gets stuck in the muck (mock) and you try to pull your leg out, but can’t. Then the trees next to you beginning to "mock" you. '
+		hint: 'Rice near a town? Thats a town'
 	},
 	{
 		clue: "竹",
 		type: READING,
 		answer: "たけ",
-		hint: 'You’re walking through the trees, looking at them. They look ominous. Then, your foot gets stuck in the muck (mock) and you try to pull your leg out, but can’t. Then the trees next to you beginning to "mock" you. '
+		hint: '"take"-out food always has bamboo in it'
 	},
 		{
 		clue: "古",
@@ -812,7 +812,7 @@ chrome.runtime.onMessage.addListener(
  		if (request.action === "prompt") {
 		    sendResponse(makeQuestion(cards));
  		} else if (request.action === "whitelist") {
- 			sendResponse(localStorage.getItem("whitelist"));
+ 			sendResponse(localStorage.getItem("whitelist") || '.*');
  		}
 	}
 );

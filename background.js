@@ -313,7 +313,7 @@ var readings = [
 		clue: "柔",
 		type: READING,
 		answer: "やわ",
-		hint: "Kawai halberd is soooft"
+		hint: "yawai halberd is soooft"
 	},
 	{
 		clue: "以",
@@ -373,13 +373,13 @@ var readings = [
 		clue: "舐",
 		type: READING,
 		answer: "ね",
-		hint: "Neh"
+		hint: "Lick a ne-ck"
 	},
 	{
 		clue: "狭",
 		type: READING,
-		answer: "せま",
-		hint: "Sema"
+		answer: "きょう",
+		hint: "Today(kyou) 2 in 10 men are squeezed into a hallway. Its tight."
 	},
 	{
 		clue: "鳴",
@@ -410,6 +410,120 @@ var readings = [
 		type: READING,
 		answer: "した",
 		hint: "In a rimjob, you put a tongue in someones shita"
+	},
+	{
+		clue: "氏",
+		type: READING,
+		answer: "し",
+		hint: "This shi-tty katar is a family heirloom"
+	},
+	{
+		clue: "鳥",
+		type: READING,
+		answer: "とり",
+		hint: "Wing with a white head. dat a bird"
+	},
+	{
+		clue: "米",
+		type: READING,
+		answer: "べい",
+		hint: "The dream is to get an American 'bae'"
+	},
+	{
+		clue: "米",
+		type: READING,
+		answer: "べい",
+		hint: "The dream is to get an American 'bae'"
+	},
+	{
+		clue: "来",
+		type: READING,
+		answer: "く",
+		hint: "Fresh leaves (top part) coming forth from a tree's 木 branches."
+	},
+	{
+		clue: "考",
+		type: READING,
+		answer: "かんが",
+		hint: "Its a kanga-roo ready to spring jump. But not yet, he is thinking about it."
+	},
+	{
+		clue: "話",
+		type: READING,
+		answer: "はな",
+		hint: "When you put your thoughts on your tongue, thats speaking"
+	},
+	{
+		clue: "西",
+		type: READING,
+		answer: "にし",
+		hint: "In the west, we like to put things in our piehole. And thats not nishi(niche?)"
+	},
+	{
+		clue: "直",
+		type: READING,
+		answer: "ただ",
+		hint: "It takes ten 十 pairs of eyes 目 to fix a corner L not made at a right angle"
+	},
+	{
+		clue: "言",
+		type: READING,
+		answer: "い",
+		hint: "Sound waves coming out of a mouth"
+	},
+	{
+		clue: "親",
+		type: READING,
+		answer: "おや",
+		hint: "Parents standing 立 behind a tree 木, watching 見 over their children. Kids hurt their shins and cry"
+	},
+	{
+		clue: "社",
+		type: READING,
+		answer: "しゃ",
+		hint: "You work all your life for your company, and your pension sucks. Whole thing is a sham"
+	},
+	{
+		clue: "数",
+		type: READING,
+		answer: "すう",
+		hint: "Woman 女 spends a soothing(suu) evening, counting rice 米 with a tool 攵"
+	},
+	{
+		clue: "近",
+		type: READING,
+		answer: "ちか",
+		hint: "Peons walk to the nearest trees with their axes 斤. Chikaku == near"
+	},
+	{
+		clue: "首",
+		type: READING,
+		answer: "しゅ",
+		hint: "You always shuut the neck. Use eye to make hole in neck"
+	},
+	{
+		clue: "新",
+		type: READING,
+		answer: "あたら",
+		hint: "Part of forest 亲 (standing 立 tree 木) cut down with an ax 斤 to make room for new growth."
+	},
+	{
+		clue: "間",
+		type: READING,
+		answer: "あいだ",
+		hint: "Sun 日 viewed through the open gate 門 during a certain interval of the day."
+	},
+	{
+		clue: "強",
+		type: READING,
+		answer: "つよ",
+		hint: "Must be pretty strong if you are drawing a bow against golden theif bug"
+	},
+	{
+		clue: "家",
+		type: READING,
+		answer: "か",
+		hint: "Roof over a beast's head? That a KAyne approves."
 	}
 ];
 
@@ -636,6 +750,24 @@ var meanings = [
 		type: READING,
 		answer: "good",
 		hint: "Eating without a roof is dah bes"
+	},
+	{
+		clue: "犭豕",
+		type: READING,
+		answer: "beast",
+		hint: "All beasts have a fluffy tail"
+	},
+	{
+		clue: "狭",
+		type: READING,
+		answer: "tight",
+		hint: "Today(kyou) 2 in 10 men are squeezed into a hallway. Its tight."
+	},
+	{
+		clue: "斤",
+		type: READING,
+		answer: "ax",
+		hint: "T is the handle, the rest is the blade."
 	}
 ];
 

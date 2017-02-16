@@ -430,12 +430,6 @@ var readings = [
 		hint: "The dream is to get an American 'bae'"
 	},
 	{
-		clue: "米",
-		type: READING,
-		answer: "べい",
-		hint: "The dream is to get an American 'bae'"
-	},
-	{
 		clue: "来",
 		type: READING,
 		answer: "く",
@@ -747,27 +741,261 @@ var meanings = [
 	},
 	{
 		clue: "良",
-		type: READING,
+		type: MEANING,
 		answer: "good",
 		hint: "Eating without a roof is dah bes"
 	},
 	{
 		clue: "犭豕",
-		type: READING,
+		type: MEANING,
 		answer: "beast",
 		hint: "All beasts have a fluffy tail"
 	},
 	{
 		clue: "狭",
-		type: READING,
+		type: MEANING,
 		answer: "tight",
 		hint: "Today(kyou) 2 in 10 men are squeezed into a hallway. Its tight."
 	},
 	{
 		clue: "斤",
-		type: READING,
+		type: MEANING,
 		answer: "ax",
 		hint: "T is the handle, the rest is the blade."
+	},
+	{
+		clue: "弓",
+		type: MEANING,
+		answer: "bow",
+		hint: "Noire is an archer with a bow. What kyuutie."
+	},
+	{
+		clue: "光",
+		type: MEANING,
+		answer: "light",
+		hint: "Like a splendid diamond shining on a pi pedestal. Hika cup and the boulder will start rolling"
+	},
+	{
+		clue: "毎",
+		type: MEANING,
+		answer: "every",
+		hint: "MAI is dad's mom, EVERYone has a mom."
+	},
+	{
+		clue: "開",
+		type: MEANING,
+		answer: "open",
+		hint: "Open your mouth, aaaaah. Theres a mini gate in between the gate"
+	},
+	{
+		clue: "柔",
+		type: MEANING,
+		answer: "soft",
+		hint: "yawai halberd is soooft"
+	},
+	{
+		clue: "以",
+		type: MEANING,
+		answer: "by means of",
+		hint: "Spades are mo than a person"
+	},
+	{
+		clue: "射",
+		type: MEANING,
+		answer: "shoot",
+		hint: "Inch to aim for the head on the body"
+	},
+	{
+		clue: "安",
+		type: MEANING,
+		answer: "cheap",
+		hint: "Woman with a hat looking for the cheap deals"
+	},
+	{
+		clue: "穴",
+		type: MEANING,
+		answer: "hole",
+		hint: "Put a hat on that hole, hole == ana"
+	},
+	{
+		clue: "倍",
+		type: MEANING,
+		answer: "times",
+		hint: "Person standing on a mouth so they don't have to say bai"
+	},
+	{
+		clue: "乳",
+		type: MEANING,
+		answer: "milk",
+		hint: "Use a new hook when you learning to fish on the ground"
+	},
+	{
+		clue: "尻",
+		type: MEANING,
+		answer: "ass",
+		hint: "I wave a flag for 9 things, its all ass"
+	},
+	{
+		clue: "猫",
+		type: MEANING,
+		answer: "cat",
+		hint: "Whiskers and rice fields, rice is white, cats are white"
+	},
+	{
+		clue: "初",
+		type: MEANING,
+		answer: "first",
+		hint: "Ne sword is the FIRST thing you want to collect"
+	},
+	{
+		clue: "舐",
+		type: MEANING,
+		answer: "neck",
+		hint: "Lick a ne-ck"
+	},
+	{
+		clue: "狭",
+		type: MEANING,
+		answer: "tight",
+		hint: "Today(kyou) 2 in 10 men are squeezed into a hallway. Its tight."
+	},
+	{
+		clue: "鳴",
+		type: MEANING,
+		answer: "cry",
+		hint: "Cries come out of birds mouth"
+	},
+	{
+		clue: "身",
+		type: MEANING,
+		answer: "body",
+		hint: "Dont touch mi body"
+	},
+	{
+		clue: "知",
+		type: MEANING,
+		answer: "know",
+		hint: "Shiiii, dont put that arrow in your mouth. Its been in koichi's neck"
+	},
+	{
+		clue: "顔",
+		type: MEANING,
+		answer: "face",
+		hint: "See the guy standing? Does he have a shellfish with eyes, thus have a face?"
+	},
+	{
+		clue: "舌",
+		type: MEANING,
+		answer: "tongue",
+		hint: "In a rimjob, you put a tongue in someones shita"
+	},
+	{
+		clue: "氏",
+		type: MEANING,
+		answer: "family name",
+		hint: "This shi-tty katar is a family heirloom"
+	},
+	{
+		clue: "鳥",
+		type: MEANING,
+		answer: "bird",
+		hint: "Wing with a white head. dat a bird"
+	},
+	{
+		clue: "米",
+		type: MEANING,
+		answer: "rice",
+		hint: "The dream is to get an American 'bae'"
+	},
+	{
+		clue: "来",
+		type: MEANING,
+		answer: "come",
+		hint: "Fresh leaves (top part) coming forth from a tree's 木 branches."
+	},
+	{
+		clue: "考",
+		type: MEANING,
+		answer: "think",
+		hint: "Its a kanga-roo ready to spring jump. But not yet, he is thinking about it."
+	},
+	{
+		clue: "話",
+		type: MEANING,
+		answer: "speak",
+		hint: "When you put your thoughts on your tongue, thats speaking"
+	},
+	{
+		clue: "西",
+		type: MEANING,
+		answer: "west",
+		hint: "In the west, we like to put things in our piehole. And thats not nishi(niche?)"
+	},
+	{
+		clue: "直",
+		type: MEANING,
+		answer: "fix",
+		hint: "It takes ten 十 pairs of eyes 目 to fix a corner L not made at a right angle"
+	},
+	{
+		clue: "言",
+		type: MEANING,
+		answer: "say",
+		hint: "Sound waves coming out of a mouth"
+	},
+	{
+		clue: "親",
+		type: MEANING,
+		answer: "parent",
+		hint: "Parents standing 立 behind a tree 木, watching 見 over their children. Kids hurt their shins and cry"
+	},
+	{
+		clue: "社",
+		type: MEANING,
+		answer: "company",
+		hint: "You work all your life for your company, and your pension sucks. Whole thing is a sham"
+	},
+	{
+		clue: "数",
+		type: MEANING,
+		answer: "number",
+		hint: "Woman 女 spends a soothing(suu) evening, counting rice 米 with a tool 攵"
+	},
+	{
+		clue: "近",
+		type: MEANING,
+		answer: "near",
+		hint: "Peons walk to the nearest trees with their axes 斤. Chikaku == near"
+	},
+	{
+		clue: "首",
+		type: MEANING,
+		answer: "neck",
+		hint: "You always shuut the neck. Use eye to make hole in neck"
+	},
+	{
+		clue: "新",
+		type: MEANING,
+		answer: "new",
+		hint: "Part of forest 亲 (standing 立 tree 木) cut down with an ax 斤 to make room for new growth."
+	},
+	{
+		clue: "間",
+		type: MEANING,
+		answer: "between",
+		hint: "Sun 日 viewed through the open gate 門 during a certain interval of the day."
+	},
+	{
+		clue: "強",
+		type: MEANING,
+		answer: "strong",
+		hint: "Must be pretty strong if you are drawing a bow against golden theif bug"
+	},
+	{
+		clue: "家",
+		type: MEANING,
+		answer: "house",
+		hint: "Roof over a beast's head? That a KAyne approves."
 	}
 ];
 

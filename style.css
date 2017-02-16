@@ -1,7 +1,7 @@
 #hey-listen {
     height: 3083px;
     width: 100%;
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     z-index: 2000;

@@ -524,6 +524,48 @@ var readings = [
 		type: READING,
 		answer: "か",
 		hint: "Roof over a beast's head? That a KAyne approves."
+	},
+	{
+		clue: "科",
+		type: READING,
+		answer: "か",
+		hint: "you swing your KAtana to protect your grain. Without agriculture you can't do your science."
+	},
+	{
+		clue: "朝",
+		type: READING,
+		answer: "あさ",
+		hint: "In the morning, though the sun 日 rises with tenfold intensity , yet the moon 月can still be seen."
+	},
+	{
+		clue: "会",
+		type: READING,
+		answer: "あ",
+		hint: "Two 二 individuals ム under the same roof."
+	},
+	{
+		clue: "絵",
+		type: READING,
+		answer: "え",
+		hint: "When strings meet to make some picture. Eeeeeh, I can't make it out."
+	},
+	{
+		clue: "遠",
+		type: READING,
+		answer: "とお",
+		hint: "far"
+	},
+	{
+		clue: "売",
+		type: READING,
+		answer: "う",
+		hint: "sell"
+	},
+	{
+		clue: "読",
+		type: READING,
+		answer: "よ",
+		hint: "Selling 売 words 言"
 	}
 ];
 
@@ -768,6 +810,12 @@ var meanings = [
 		type: READING,
 		answer: "ax",
 		hint: "T is the handle, the rest is the blade."
+	},
+	{
+		clue: "禾",
+		type: READING,
+		answer: "grain",
+		hint: "tree with a slanty hat is grain."
 	}
 ];
 

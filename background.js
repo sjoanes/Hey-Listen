@@ -896,13 +896,12 @@ function makeQuestion(callback) {
         if (event.target.result) {
         	var question = event.target.result.value;
         	var options = getRandomOptions(readings);
-        	var answerIndex = randomIndex(options);
-        	options[answerIndex] = question.answer;
+        	options[randomIndex(options)] = question.answer;
 
             callback({
 				hint: question.clue,
 				choices: options,
-				answer: answerIndex,
+				answer: question.answer,
 				mnemonic: question.hint
 			});
         }

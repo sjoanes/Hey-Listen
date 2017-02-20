@@ -46,11 +46,12 @@ function reset(answerRef) {
 	answerRef.attempts = 0;
 }
 
-function makeAttempt(guess, answerRef) {
+function makeAttempt(guessIndex, answerRef) {
+	var guess = document.getElementById("btn" + guessIndex).innerText;
 	if (guess === answerRef.answer) {
 		reset(answerRef);
-	} else if (guess < 4) {
-		document.getElementById("btn" + guess).disabled = true;
+	} else {
+		document.getElementById("btn" + guessIndex).disabled = true;
 		answerRef.attempts++;
 	}
 
@@ -65,7 +66,9 @@ function addInputHandlers(answerRef) {
 					   event.keyCode === 83 ? 1 : 		// s
 					   event.keyCode === 68 ? 2 : 		// d
 					   event.keyCode === 70 ? 3 : 4;	// f (4 is never the answer)
-		makeAttempt(adjusted, answerRef);
+		if (adjusted < 4) {
+			makeAttempt(adjusted, answerRef);
+		}
 	});
 
 	for (var i = 0; i < 4; i++) {

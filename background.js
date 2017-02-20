@@ -876,6 +876,16 @@ var meanings = [
 
 var db;
 
+function randomIndex(list) {
+	return Math.floor(Math.random() * list.length);
+}
+
+function getRandomOptions(list) {
+	return [1,2,3,4].map(function() {
+		return list[randomIndex(list)].answer;
+	});
+}
+
 function makeQuestion(callback) {
 	var openCursorRequest = db.transaction(["readings"], "readwrite")
 		.objectStore("readings")
@@ -885,10 +895,14 @@ function makeQuestion(callback) {
 	openCursorRequest.onsuccess = function (event) {
         if (event.target.result) {
         	var question = event.target.result.value;
+        	var options = getRandomOptions(readings);
+        	var answerIndex = randomIndex(options);
+        	options[answerIndex] = question.answer;
+
             callback({
 				hint: question.clue,
-				choices: ["asd", "asd", "asd","asd"],
-				answer: 1,
+				choices: options,
+				answer: answerIndex,
 				mnemonic: question.hint
 			});
         }
@@ -923,6 +937,7 @@ chrome.runtime.onMessage.addListener(
  		console.log(request)
  		if (request.action === "prompt") {
 		    makeQuestion(sendResponse);
+		    return true;
  		} else if (request.action === "whitelist") {
  			sendResponse(localStorage.getItem("whitelist") || '.*');
  		}

@@ -874,46 +874,55 @@ var meanings = [
 	}
 ];
 
-var cards = [shuffle(meanings), shuffle(readings)];
+var db;
 
-function shuffle(a) {
-    var j, x, i;
-    for (i = a.length; i; i--) {
-        j = Math.floor(Math.random() * i);
-        x = a[i - 1];
-        a[i - 1] = a[j];
-        a[j] = x;
-    }
+function makeQuestion(callback) {
+	var openCursorRequest = db.transaction(["readings"], "readwrite")
+		.objectStore("readings")
+		.index('exp')
+		.openCursor(null, 'next');
 
-    return a;
+	openCursorRequest.onsuccess = function (event) {
+        if (event.target.result) {
+        	var question = event.target.result.value;
+            callback({
+				hint: question.clue,
+				choices: ["asd", "asd", "asd","asd"],
+				answer: 1,
+				mnemonic: question.hint
+			});
+        }
+	}
+
+	openCursorRequest.onerror = function(event) {
+		console.log("Fail", event);
+	}
 }
 
-function roundRobin(array) {
-	var head = array.shift();
-	array.push(head);
-	return head;
-}
+function setupDb() {
+	var request = window.indexedDB.open("factbank", 1);
+	request.onerror = function(event) { console.log(event.target.errorCode); };
+	request.onsuccess = function(event) { db = request.result; };
 
-function makeQuestion(cards) {
-	var stack = roundRobin(cards);
-	var question = roundRobin(stack);
-	var options = shuffle([stack.length - 1,0,1,2].map(function(i) {
-		return stack[i].answer;
-	}));
+	request.onupgradeneeded = function(event) {
+	    db = event.target.result;
+	    var store = db.createObjectStore('readings', {keyPath: ['clue', 'answer']});
+		store.createIndex("exp", "exp", { unique: false });
 
-	return {
-		hint: question.clue,
-		choices: options,
-		answer: options.indexOf(question.answer),
-		mnemonic: question.hint
+	    for (var i = 0; i < readings.length; i++) {
+	    	readings[i].exp = 0;
+	    	store.add(readings[i]);
+	    }
 	};
 }
+
+setupDb();
 
 chrome.runtime.onMessage.addListener(
  	function(request, sender, sendResponse) {
  		console.log(request)
  		if (request.action === "prompt") {
-		    sendResponse(makeQuestion(cards));
+		    makeQuestion(sendResponse);
  		} else if (request.action === "whitelist") {
  			sendResponse(localStorage.getItem("whitelist") || '.*');
  		}

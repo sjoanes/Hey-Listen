@@ -36,6 +36,12 @@
     text-shadow: 5px 2px 0px #282222;
 }
 
+#hey-listen #answers button:disabled {
+    box-shadow: 0 0 !important;
+    transition: box-shadow 0.1s;
+    background: #BDBDBD;
+}
+
 #hey-listen #answers button {
     width: 23%;
     height: 50px;

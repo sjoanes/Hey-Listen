@@ -36,13 +36,21 @@ function updateDomWithQuestion(answerRef) {
 	});
 }
 
+function reset(answerRef) {
+	for (var i = 0; i < 4; i++) {
+		document.getElementById("btn" + i).disabled = false;
+	}
+	document.getElementById("hey-listen").style.display = "none";
+	document.getElementById("mnemonic").style.display = "none";
+	annoy(answerRef)
+	answerRef.attempts = 0;
+}
+
 function makeAttempt(guess, answerRef) {
 	if (guess === answerRef.answer) {
-		document.getElementById("hey-listen").style.display = "none";
-		document.getElementById("mnemonic").style.display = "none";
-		annoy(answerRef)
-		answerRef.attempts = 0;
+		reset(answerRef);
 	} else if (guess < 4) {
+		document.getElementById("btn" + guess).disabled = true;
 		answerRef.attempts++;
 	}
 

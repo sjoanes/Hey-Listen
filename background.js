@@ -899,7 +899,7 @@ function makeQuestion(callback) {
         	options[randomIndex(options)] = question.answer;
 
             callback({
-				hint: question.clue,
+				clue: question.clue,
 				choices: options,
 				answer: question.answer,
 				mnemonic: question.hint
@@ -912,6 +912,18 @@ function makeQuestion(callback) {
 	}
 }
 
+function gainExperience(clue, attempts) {
+	var objectStore = db.transaction(["readings"], "readwrite").objectStore("readings");
+	var getRequest = objectStore.get(clue);
+
+	getRequest.onsuccess = function (event) {
+		var updated = getRequest.result;
+		var energy = attempts ? Math.floor((Math.random() * attempts) + 1) : 0;
+        updated.exp += 5 - Math.min(3, energy);
+        objectStore.put(updated).onsuccess = function() {};
+	}
+}
+
 function setupDb() {
 	var request = window.indexedDB.open("factbank", 1);
 	request.onerror = function(event) { console.log(event.target.errorCode); };
@@ -919,7 +931,7 @@ function setupDb() {
 
 	request.onupgradeneeded = function(event) {
 	    db = event.target.result;
-	    var store = db.createObjectStore('readings', {keyPath: ['clue', 'answer']});
+	    var store = db.createObjectStore('readings', {keyPath: 'clue'});
 		store.createIndex("exp", "exp", { unique: false });
 
 	    for (var i = 0; i < readings.length; i++) {
@@ -939,6 +951,8 @@ chrome.runtime.onMessage.addListener(
 		    return true;
  		} else if (request.action === "whitelist") {
  			sendResponse(localStorage.getItem("whitelist") || '.*');
+ 		} else if (request.action === "solved") {
+ 			gainExperience(request.clue, request.attempts);
  		}
 	}
 );

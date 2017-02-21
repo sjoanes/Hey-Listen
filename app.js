@@ -25,7 +25,7 @@ function annoy(answerRef) {
 function updateDomWithQuestion(answerRef) {
 	chrome.runtime.sendMessage({action: "prompt"}, function(response) {
 		document.getElementById("hey-listen").focus()
-		document.getElementById("fact").innerHTML = response.hint;
+		document.getElementById("fact").innerHTML = response.clue;
 		document.getElementById("mnemonic").innerHTML = response.mnemonic;
 
 		for (var i = 0; i < response.choices.length; i++) {
@@ -33,6 +33,7 @@ function updateDomWithQuestion(answerRef) {
 		}
 
 		answerRef.answer = response.answer;
+		answerRef.clue = response.clue;
 	});
 }
 
@@ -46,9 +47,22 @@ function reset(answerRef) {
 	answerRef.attempts = 0;
 }
 
+function solved(answerRef) {
+	chrome.runtime.sendMessage(
+		{
+			action: "solved",
+			attempts: answerRef.attempts,
+			clue: answerRef.clue,
+
+		},
+		function() {}
+	);
+}
+
 function makeAttempt(guessIndex, answerRef) {
 	var guess = document.getElementById("btn" + guessIndex).innerText;
 	if (guess === answerRef.answer) {
+		solved(answerRef);
 		reset(answerRef);
 	} else {
 		document.getElementById("btn" + guessIndex).disabled = true;

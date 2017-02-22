@@ -500,7 +500,7 @@ var readings = [
 	},
 	{
 		clue: "合",
-		answer: "よ",
+		answer: "ごう",
 		hint: "Fit a triangle and square into the baby toy. Matching them is like a go-al for babies."
 	},
 	{
@@ -545,7 +545,7 @@ var readings = [
 	},
 	{
 		clue: "化",
-		answer: "よ",
+		answer: "か",
 		hint: "KAyne can change the shape of the spoon."
 	},
 	{
@@ -1029,9 +1029,8 @@ function setupDb() {
 
 			var getRequest = objectStore.get(readings[i].clue);
 			getRequest.onsuccess = function(event) {
-				var fact = event.target.result || readings[i];
-				fact.exp = fact.exp || 0;
-				objectStore.put(fact).onsuccess = function() { putIfDoesntExist(i + 1, array) };
+				readings[i].exp = event.target.result && event.target.result.exp || 0;
+				objectStore.put(readings[i]).onsuccess = function() { putIfDoesntExist(i + 1, array) };
 			}
 		}
 	};

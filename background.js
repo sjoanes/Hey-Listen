@@ -456,17 +456,107 @@ var readings = [
 	{
 		clue: "遠",
 		answer: "とお",
-		hint: "far"
+		hint: "Only the nobility 袁 (mouths 口 of robes  trailing on the ground 土) could afford to travel  to distant places"
 	},
 	{
 		clue: "売",
 		answer: "う",
-		hint: "sell"
+		hint: "When you put Earth on the table, thats the practice of selling"
 	},
 	{
 		clue: "読",
 		answer: "よ",
 		hint: "Selling 売 words 言"
+	},
+	{
+		clue: "栄",
+		answer: "えい",
+		hint: "A good education  system and good resources 木 bring prosperity"
+	},
+	{
+		clue: "養",
+		answer: "よう",
+		hint: "To raise/rear children one has to give them lots of  food to eat 食."
+	},
+	{
+		clue: "相",
+		answer: "そう",
+		hint: "SO (significant others) eye 目 each other mutually, each from behind a tree 木"
+	},
+	{
+		clue: "場",
+		answer: "じょう",
+		hint: "Grazing grounds 土 for cattle 昜"
+	},
+	{
+		clue: "決",
+		answer: "けっ",
+		hint: "Village headman 夬 DECIDES the distribution of the water シ in the KEttle"
+	},
+	{
+		clue: "拾",
+		answer: "しゅう",
+		hint: "Pick up a gun with both hands 扌 together 合. And shuu-t!"
+	},
+	{
+		clue: "合",
+		answer: "よ",
+		hint: "Fit a triangle and square into the baby toy. Matching them is like a go-al for babies."
+	},
+	{
+		clue: "声",
+		answer: "せい",
+		hint: "Soldier 士 with weapon ノ shouting with a double loud mouth 口口. <bold>SEI</bold>TO KAIBA!!!!!"
+	},
+	{
+		clue: "別",
+		answer: "べつ",
+		hint: "Put your betsu in. You dont have a choice with the katana to your mouth and a knife next to that. You thought this is different from usual"
+	},
+	{
+		clue: "込",
+		answer: "こ",
+		hint: "Moving (on the road) inward 入 for the KO"
+	},
+	{
+		clue: "汚",
+		answer: "きたな",
+		hint: "kitana from mortal kombat is dirty"
+	},
+	{
+		clue: "味",
+		answer: "あじ",
+		hint: "In the mouth 口 and not yet 未 swallowed. Ajeez not again"
+	},
+	{
+		clue: "高",
+		answer: "たか",
+		hint: "Stack all those box up high like a pagoda. (taka)"
+	},
+	{
+		clue: "恥",
+		answer: "はず",
+		hint: "You can hear your heart in your ears when you are embarassed."
+	},
+	{
+		clue: "幸",
+		answer: "しあわ",
+		hint: "Happy couple \ / in their own shielded 干 world/land 土."
+	},
+	{
+		clue: "化",
+		answer: "よ",
+		hint: "KAyne can change the shape of the spoon."
+	},
+	{
+		clue: "夫",
+		answer: "ふ",
+		hint: "Two humans, one is the husband who is screaming fuuuuuu"
+	},
+	{
+		clue: "未",
+		answer: "み",
+		hint: "Like a MImosa sapling 木 with small branches一, not full-grown yet"
 	}
 ];
 

@@ -920,24 +920,36 @@ function gainExperience(clue, attempts) {
 		var updated = getRequest.result;
 		var energy = attempts ? Math.floor((Math.random() * attempts) + 1) : 0;
         updated.exp += 5 - Math.min(3, energy);
-        objectStore.put(updated).onsuccess = function() {};
+        objectStore.put(updated);
 	}
 }
 
 function setupDb() {
 	var request = window.indexedDB.open("factbank", 1);
 	request.onerror = function(event) { console.log(event.target.errorCode); };
-	request.onsuccess = function(event) { db = request.result; };
+	request.onsuccess = function(event) {
+		db = request.result;
+
+		var objectStore = db.transaction(["readings"], "readwrite").objectStore("readings");
+		putIfDoesntExist(0, readings, objectStore);
+
+		// this updates the vocabulary list without touching the experience(exp) values
+	    function putIfDoesntExist(i, array, store) {
+			if (i >= array.length) return;
+
+			var getRequest = objectStore.get(readings[i].clue);
+			getRequest.onsuccess = function(event) {
+				var fact = event.target.result || readings[i];
+				fact.exp = fact.exp || 0;
+				objectStore.put(fact).onsuccess = function() { putIfDoesntExist(i + 1, array) };
+			}
+		}
+	};
 
 	request.onupgradeneeded = function(event) {
 	    db = event.target.result;
 	    var store = db.createObjectStore('readings', {keyPath: 'clue'});
 		store.createIndex("exp", "exp", { unique: false });
-
-	    for (var i = 0; i < readings.length; i++) {
-	    	readings[i].exp = 0;
-	    	store.add(readings[i]);
-	    }
 	};
 }
 

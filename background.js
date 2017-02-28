@@ -471,12 +471,12 @@ var readings = [
 	{
 		clue: "栄",
 		answer: "えい",
-		hint: "A good education  system and good resources 木 bring prosperity"
+		hint: "A good education \\/ system and good resources 木 bring prosperity. EIsenhower knew that."
 	},
 	{
 		clue: "養",
 		answer: "よう",
-		hint: "To raise/rear children one has to give them lots of  food to eat 食."
+		hint: "To raise/rear children one has to spend lots of Yen to give them YooHoo and food to eat 食."
 	},
 	{
 		clue: "相",
@@ -486,7 +486,7 @@ var readings = [
 	{
 		clue: "場",
 		answer: "じょう",
-		hint: "Grazing grounds 土 for cattle 昜"
+		hint: "Jyousuke lived in the countryside. Grazing grounds 土 for cattle 昜."
 	},
 	{
 		clue: "決",
@@ -554,9 +554,49 @@ var readings = [
 		hint: "Two humans, one is the husband who is screaming fuuuuuu"
 	},
 	{
-		clue: "未",
-		answer: "み",
+		clue: "加",
+		answer: "くわ",
+		hint: "KUWAit needs to Strengthed 力 itself by adding food to the mouth 口"
+	},
+	{
+		clue: "眺",
+		answer: "Keep your eyes north for the NAGA",
 		hint: "Like a MImosa sapling 木 with small branches一, not full-grown yet"
+	},
+	{
+		clue: "悪",
+		answer: "わる",
+		hint: "亜 is a coffin being carried. Hearts are heavy. This is a BAD day. warui == bad"
+	},
+	{
+		clue: "張",
+		answer: "は",
+		hint: "HA you scream in victory as you nail the Nohrian with your long bow"
+	},
+	{
+		clue: "皆",
+		answer: "みな",
+		hint: "Everyone has two spoons on their skull. Everyone = mina"
+	},
+	{
+		clue: "付",
+		answer: "つ",
+		hint: "Every inch of Kurisu(person) is TSUndere"
+	},
+	{
+		clue: "似",
+		answer: "に",
+		hint: "Your NI really resembles my knee."
+	},
+	{
+		clue: "泣",
+		answer: "な",
+		hint: "Standing with water flowing out. Crying = na"
+	},
+	{
+		clue: "臭",
+		answer: "くさ",
+		hint: "Oneself big, smeellllss. KUSAI"
 	}
 ];
 

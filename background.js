@@ -560,8 +560,8 @@ var readings = [
 	},
 	{
 		clue: "眺",
-		answer: "Keep your eyes north for the NAGA",
-		hint: "Like a MImosa sapling 木 with small branches一, not full-grown yet"
+		answer: "なが",
+		hint: "Keep your eyes north for the NAGA"
 	},
 	{
 		clue: "悪",

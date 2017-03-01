@@ -7,4 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	document.getElementById("save").addEventListener('click', function() {
 		localStorage.setItem('whitelist', getBL().value)
 	});
+
+	document.getElementById("showRegex").addEventListener('click', function() {
+		document.getElementById("regex").style.display = "block";
+	});
 });

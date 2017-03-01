@@ -5,8 +5,8 @@
         "css": ["style.css"],
         "matches": ["<all_urls>"]
     } ],
-    "description": "Inject a complete, premade web page",
-    "name": "Inject whole web page",
+    "description": "Learn kanji while you procrastinate",
+    "name": "Hey Listen",
     "version": "1",
     "web_accessible_resources": ["app.html", "style.css", "options.js"],
     "options_page": "options.html",

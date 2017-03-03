@@ -310,8 +310,8 @@ var readings = [
 	},
 	{
 		clue: "舐",
-		answer: "ね",
-		hint: "Lick a ne-ck"
+		answer: "な",
+		hint: "Lick a na-ck"
 	},
 	{
 		clue: "狭",

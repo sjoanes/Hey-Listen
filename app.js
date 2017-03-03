@@ -1,12 +1,12 @@
 initialize();
 
 function initialize() {
-	chrome.runtime.sendMessage({action: "whitelist"}, function(response) {
-		if (!(new RegExp(response, "i").test(window.location.href))) {
+	chrome.runtime.sendMessage({action: "init"}, function(response) {
+		if (!(new RegExp(response.whitelist, "i").test(window.location.href))) {
 			return;
 		}
 
-		var answerRef = {attempts: 0};
+		var answerRef = {attempts: 0, delay: response.delay};
 		injectHtmlOverlay();
 		injectCss();
 		addInputHandlers(answerRef);
@@ -18,7 +18,7 @@ function annoy(answerRef) {
 	setTimeout(function() {
 		updateDomWithQuestion(answerRef);
 		document.getElementById("hey-listen").style.display = "initial";
-	}, 10000);
+	}, answerRef.delay * 1000);
 }
 
 // This will get a question from the background script and update the DOM
@@ -43,7 +43,7 @@ function reset(answerRef) {
 	}
 	document.getElementById("hey-listen").style.display = "none";
 	document.getElementById("mnemonic").style.display = "none";
-	annoy(answerRef)
+	annoy(answerRef, answerRef.delay)
 	answerRef.attempts = 0;
 }
 

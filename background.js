@@ -1090,8 +1090,11 @@ chrome.runtime.onMessage.addListener(
  		if (request.action === "prompt") {
 		    makeQuestion(sendResponse);
 		    return true;
- 		} else if (request.action === "whitelist") {
- 			sendResponse(localStorage.getItem("whitelist") || '.*');
+ 		} else if (request.action === "init") {
+ 			sendResponse({
+ 				whitelist: localStorage.getItem("whitelist") || 'x',
+ 				delay: localStorage.getItem("delay") || 10
+ 			});
  		} else if (request.action === "solved") {
  			gainExperience(request.clue, request.attempts);
  		}

@@ -3,22 +3,37 @@
 	<title>Hey Listen Options</title>
 	<script type="text/javascript" src="options.js"></script>
 	<style>
-		h1 {margin: 10px;}
+		body {
+			pading: 10px;
+		}
+		p {
+			font-size: 25px;
+		}
 		textarea {
-		    margin: 10px;
 		    width:  600px;
-		    height: 300px;
+		    height: 30px;
+		}
+		input {
+			width: 600px;
+			height: 30px;
 		}
 		button {
 		    display: block;
-		    margin: 10px;
-		    width:  600px;
+		    margin: 30px 0;
+		    width: 600px;
+		}
+		.regex-example {
+			display: none;
+			font-size: 15px;
 		}
 	</style>
 </head>
 <body>
-	<h1>Specify the websites this extension should work on</h1>
+	<p>Specify regex<a href="#" id="showRegex">?</a> for the websites this extension should work on:</p>
+	<p id="regex" class="regex-example">Regex is a not so fancy way to describe patterns of letters, instead of explaining, you can use this example as a template. <bold>Example:</bold> .*reddit|facebook|youtube.*</p>
 	<textarea id="whitelist"></textarea>
-	<button id="save">Save</button>
+	<p>Specify the number of seconds between prompts:</p>
+	<input id="delay" type="number"/>
+	<button id="save">Save All</button>
 </body>
 </html>

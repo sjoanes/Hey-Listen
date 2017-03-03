@@ -1,10 +1,14 @@
-function getBL() {
-	return document.getElementById("whitelist");
-}
 
 document.addEventListener('DOMContentLoaded', function () {
-	getBL().value = localStorage.getItem('whitelist') || '.*';
+	document.getElementById("whitelist").value = localStorage.getItem('whitelist') || '';
+	document.getElementById("delay").value = localStorage.getItem('delay') || 10;
+
 	document.getElementById("save").addEventListener('click', function() {
-		localStorage.setItem('whitelist', getBL().value)
+		localStorage.setItem('whitelist', document.getElementById("whitelist").value);
+		localStorage.setItem('delay', document.getElementById("delay").value);
+	});
+
+	document.getElementById("showRegex").addEventListener('click', function() {
+		document.getElementById("regex").style.display = "block";
 	});
 });

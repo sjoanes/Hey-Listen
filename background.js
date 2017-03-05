@@ -541,7 +541,7 @@ var readings = [
 	{
 		clue: "幸",
 		answer: "しあわ",
-		hint: "Happy couple \ / in their own shielded 干 world/land 土."
+		hint: "Happy couple \\ / in their own shielded 干 world/land 土."
 	},
 	{
 		clue: "化",
@@ -597,6 +597,131 @@ var readings = [
 		clue: "臭",
 		answer: "くさ",
 		hint: "Oneself big, smeellllss. KUSAI"
+	},
+	{
+		clue: "金",
+		answer: "きん",
+		hint: "He presented two GOLD nuggets ( \\ / ) covered (roof thing) with earth (土) to the blue KINg (キン)."
+	},
+	{
+		clue: "青",
+		answer: "あお",
+		hint: "Ow(ao) my toe is blue for a month now"
+	},
+	{
+		clue: "戸",
+		answer: "くさ",
+		hint: "You put up a flag after you once stubbed your TOe in the door"
+	},
+	{
+		clue: "外",
+		answer: "がい",
+		hint: "In the early evening タ, fortune tellers ト sit outside"
+	},
+	{
+		clue: "台",
+		answer: "だい",
+		hint: "Individual ム speaking 口 on a podium"
+	},
+	{
+		clue: "母",
+		answer: "はは",
+		hint: "These are sideways boobs, like mothers have"
+	},
+	{
+		clue: "地",
+		answer: "ち",
+		hint: "Earth 土 with earthworms 也 are the main producers of CHIese."
+	},
+	{
+		clue: "作",
+		answer: "つく",
+		hint: "Person's イ surprise 乍 at the sight of a beautifully made object. Make == tsukuru"
+	},
+	{
+		clue: "汽",
+		answer: "き",
+		hint: "Evaporation of water シ."
+	},
+	{
+		clue: "当",
+		answer: "あ",
+		hint: "Hand ヨ strikes flint to make fire \|/ AH it worked!?"
+	},
+	{
+		clue: "池",
+		answer: "ち",
+		hint: "Stagnant water シ with insects that snakes 也 can feed on. Later used for CHIese"
+	},
+	{
+		clue: "羽",
+		answer: "は",
+		hint: "HAhahahaha stop tickling me with those feathers"
+	},
+	{
+		clue: "自",
+		answer: "じ",
+		hint: "Point at your eye to refer to self. Use eyes to Jiiiiiiiro jiro"
+	},
+	{
+		clue: "色",
+		answer: "いろ",
+		hint: "The artist's installation includes statues of bent bodies (, 巴), which are SHOCKingly (ショク) blue, in front of a COLORful"
+	},
+	{
+		clue: "図",
+		answer: "と",
+		hint: "Drawing a TOe on a map as a hint for later"
+	},
+	{
+		clue: "声",
+		answer: "こえ",
+		hint: "My flag will be under the Earth before I stop singing Koe Koe In the House"
+	},
+	{
+		clue: "形",
+		answer: "けい",
+		hint: "The gate with hair is SHAPEd like a KEI"
+	},
+	{
+		clue: "角",
+		answer: "かく",
+		hint: "Horn on an elephant is a /\\"
+	},
+	{
+		clue: "走",
+		answer: "はし",
+		hint: "Put your feet to the ground and run. Run == hashiru"
+	},
+	{
+		clue: "画",
+		answer: "が",
+		hint: "The stain GArasu(glass) picture hangs from the ceiling"
+	},
+	{
+		clue: "国",
+		answer: "くに",
+		hint: "King with his jewel 玉 within the borders 口 of his country"
+	},
+	{
+		clue: "夜",
+		answer: "や",
+		hint: "At night, a person イ goes under cover 亠 and holds in his hand 夂 his small valuables 乀."
+	},
+	{
+		clue: "店",
+		answer: "みせ",
+		hint: "A MISErable job is fortunetelling 占 in her store 广"
+	},
+	{
+		clue: "歩",
+		answer: "ある",
+		hint: "A few 少 steps taken with the feet, stopping 止 because you are slowly walking taking in the smell of all the ARUgala"
+	},
+	{
+		clue: "門",
+		answer: "もん",
+		hint: "pokeMON is a gateway drug to the rest of anime in the west"
 	}
 ];
 

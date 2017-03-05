@@ -5,12 +5,12 @@ var readings = [
 	{
 		clue: "年",
 		answer: "ねん",
-		hint: "Every year it feels like guns are on top."
+		hint: "NENtendo comes up with great content every YEAR."
 	},
 	{
 		clue: "食",
 		answer: "た",
-		hint: 'Your eyes are important to you, right? Sadly, one of your eyes is missing right now, because a sheep grabbed it and pulled it out, and is now running away from you, yelling his sheep call.... "Mehhhhhh"'
+		hint: 'You eat on a TAble. You only eat when you have a good(良) roof over your head'
 	},
 	{
 		clue: "林",
@@ -20,17 +20,17 @@ var readings = [
 	{
 		clue: "雨",
 		answer: "あめ",
-		hint: 'The ticks are rain'
+		hint: 'The ticks are rain. Thank God, AMEn, we have a roof!'
 	},
 	{
 		clue: "長",
 		answer: "なが",
-		hint: 'The naga have long tails'
+		hint: 'The naga have long tails with spades at the end'
 	},
 	{
 		clue: "夕",
 		answer: "ゆう",
-		hint: 'yuu are the bes '
+		hint: 'Who added that extra line to you ク to make タ? YUU did.'
 	},
 	{
 		clue: "名",
@@ -40,12 +40,12 @@ var readings = [
 	{
 		clue: "文 ",
 		answer: "ぶん",
-		hint: 'That doll has a "bun" hair style'
+		hint: 'That doll has a BUN hair style'
 	},
 	{
 		clue: "町",
 		answer: "まち",
-		hint: 'Rice near a town? Thats a town'
+		hint: 'The MACHIne moves it from the rice paddy to town.'
 	},
 	{
 		clue: "竹",

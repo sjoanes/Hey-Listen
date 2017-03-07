@@ -1179,12 +1179,26 @@ function gainExperience(clue, attempts) {
 	}
 }
 
+function getDecayFactor(now) {
+	var lastUpdate = localStorage.getItem("lastUpdate");
+	var timeElasped = now - lastUpdate;
+	var MILLI_IN_DAY = 86400000;
+
+	if (timeElasped > MILLI_IN_DAY) {
+		localStorage.setItem('lastUpdate', now);
+		return Math.pow(0.9, Math.floor(timeElasped / MILLI_IN_DAY));
+	} else {
+		return 1;
+	}
+}
+
 function setupDb() {
 	var request = window.indexedDB.open("factbank", 1);
 	request.onerror = function(event) { console.log(event.target.errorCode); };
 	request.onsuccess = function(event) {
 		db = request.result;
 
+		var decay = getDecayFactor(Date.now());
 		var objectStore = db.transaction(["readings"], "readwrite").objectStore("readings");
 		putIfDoesntExist(0, readings, objectStore);
 
@@ -1194,7 +1208,8 @@ function setupDb() {
 
 			var getRequest = objectStore.get(readings[i].clue);
 			getRequest.onsuccess = function(event) {
-				readings[i].exp = event.target.result && event.target.result.exp || 0;
+				var exp = event.target.result && event.target.result.exp || 0
+				readings[i].exp = Math.floor(exp * decay);
 				objectStore.put(readings[i]).onsuccess = function() { putIfDoesntExist(i + 1, array) };
 			}
 		}
@@ -1207,21 +1222,33 @@ function setupDb() {
 	};
 }
 
-setupDb();
+function setupMessageHandler() {
+	chrome.runtime.onMessage.addListener(
+		function(request, sender, sendResponse) {
+			console.log(request)
+			if (request.action === "prompt") {
+			    makeQuestion(sendResponse);
+			    return true;
+			} else if (request.action === "init") {
+				sendResponse({
+					whitelist: localStorage.getItem("whitelist") || 'x',
+					delay: localStorage.getItem("delay") || 10
+				});
+			} else if (request.action === "solved") {
+				gainExperience(request.clue, request.attempts);
+			}
+		}
+	);
+}
 
-chrome.runtime.onMessage.addListener(
- 	function(request, sender, sendResponse) {
- 		console.log(request)
- 		if (request.action === "prompt") {
-		    makeQuestion(sendResponse);
-		    return true;
- 		} else if (request.action === "init") {
- 			sendResponse({
- 				whitelist: localStorage.getItem("whitelist") || 'x',
- 				delay: localStorage.getItem("delay") || 10
- 			});
- 		} else if (request.action === "solved") {
- 			gainExperience(request.clue, request.attempts);
- 		}
+function init() {
+	setupDb();
+	setupMessageHandler();
+
+	// initialize time tracking
+	if (!localStorage.getItem("lastUpdate")) {
+		localStorage.setItem("lastUpdate", Date.now())
 	}
-);
+}
+
+init();

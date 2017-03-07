@@ -610,7 +610,7 @@ var readings = [
 	},
 	{
 		clue: "戸",
-		answer: "くさ",
+		answer: "と",
 		hint: "You put up a flag after you once stubbed your TOe in the door"
 	},
 	{

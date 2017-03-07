@@ -722,6 +722,116 @@ var readings = [
 		clue: "門",
 		answer: "もん",
 		hint: "pokeMON is a gateway drug to the rest of anime in the west"
+	},
+	{
+		clue: "室",
+		answer: "しつ",
+		hint: "Where one finally arrives 至 after entering a house 宀, desperately needing to take a SHITSU"
+	},
+	{
+		clue: "至",
+		answer: "いた",
+		hint: "Arrive in praires only to get an arrow in the back, ittaaaa"
+	},
+	{
+		clue: "後",
+		answer: "うし",
+		hint: "Walking 彳 with a thread 幺 in the hand 夂: it trails behind. USHIro = behind"
+	},
+	{
+		clue: "活",
+		answer: "がっ",
+		hint: "Active person with a well oiled シ tongue 舌 because GArlic is always keeping it salivated"
+	},
+	{
+		clue: "海",
+		answer: "うみ",
+		hint: "Where every 毎 drop of water シ flows to."
+	},
+	{
+		clue: "思",
+		answer: "おも",
+		hint: "OH MOses, your heart lies with the rice paddies"
+	},
+	{
+		clue: "昼",
+		answer: "ひる",
+		hint: "The HIRO of the sun 日 is tiny, casting a one foot 尺 long shadow on the ground 一"
+	},
+	{
+		clue: "尺",
+		answer: "しゃく",
+		hint: "Theres a big R on the flag, its the sign for the SHAKU"
+	},
+	{
+		clue: "点",
+		answer: "てん",
+		hint: "The fortuneteller was put to flames because only 1 in TEN things he said were true. He never really got to the POINT"
+	},
+	{
+		clue: "計",
+		answer: "けい",
+		hint: "The key(KEI) to wisdom is to MEASURE your words 言 many 十 times before speaking"
+	},
+	{
+		clue: "風",
+		answer: "かぜ",
+		hint: "A bug is off the ground when the wind picks it up. KAZE = wind"
+	},
+	{
+		clue: "帰",
+		answer: "かえ",
+		hint: "Need to return my KAEtana to my city"
+	},
+	{
+		clue: "弱",
+		answer: "よわ",
+		hint: "YO WAH(yowa) are you doing??! Trying to dual wield bows makes you WEAKER."
+	},
+	{
+		clue: "通",
+		answer: "つう",
+		hint: "Main street where people move around in action 甬. TOO(tsuu) busy to talk is usual on the commute"
+	},
+	{
+		clue: "現",
+		answer: "けん",
+		hint: "The king 王 KEN is actually seen 見 only at special events"
+	},
+	{
+		clue: "書",
+		answer: "か",
+		hint: "Using a writing brush 聿 (holding brush 丨 with fingers 二) in a sunlit 日 place. KAku = write"
+	},
+	{
+		clue: "寺",
+		answer: "てら",
+		hint: "Place 土 where monks follow monastic rules 寸. oTERA = temple"
+	},
+	{
+		clue: "時",
+		answer: "じ",
+		hint: "Time of the day 日 announced by the temple 寺 bell. the G(ji) rings the bell cause he is a boss"
+	},
+	{
+		clue: "記",
+		answer: "き",
+		hint: "One's 己 words 言 written down so I never forget I have to KIll you"
+	},
+	{
+		clue: "己",
+		answer: "おのれ",
+		hint: "If I ever saw those snakes ONE REpublic, id address them with ONERE"
+	},
+	{
+		clue: "魚",
+		answer: "さかな",
+		hint: "Cook some rice over a fire. Whats that on the top? Its a fish. SAKANA = fish"
+	},
+	{
+		clue: "黄",
+		answer: "き",
+		hint: "Grain is protected by a fence. Its like eight rice in one."
 	}
 ];
 

@@ -1283,8 +1283,8 @@ function gainExperience(clue, attempts) {
 
 	getRequest.onsuccess = function (event) {
 		var updated = getRequest.result;
-		var energy = attempts ? Math.floor((Math.random() * attempts) + 1) : 0;
-        updated.exp += 5 - Math.min(3, energy);
+		var failAttempts = attempts == 1 ? Math.floor((Math.random() * 2) % 2) : attempts; // assume %50 of 1 failed attempts are misinputs
+        updated.exp += 4 - Math.min(3, failAttempts);
         objectStore.put(updated);
 	}
 }

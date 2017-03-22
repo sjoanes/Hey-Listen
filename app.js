@@ -69,7 +69,7 @@ function makeAttempt(guessIndex, answerRef) {
 		answerRef.attempts++;
 	}
 
-	if (answerRef.attempts > 2) {
+	if (answerRef.attempts > 1) {
 		document.getElementById("mnemonic").style.display = "initial";
 	}
 }

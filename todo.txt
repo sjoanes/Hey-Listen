@@ -1,2 +1,0 @@
-highlight example in options page better
-icon for the extension

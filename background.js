@@ -1303,6 +1303,8 @@ function getDecayFactor(now) {
 }
 
 function setupDb() {
+	var item = 0;
+	var level = 0;
 	var request = window.indexedDB.open("factbank", 1);
 	request.onerror = function(event) { console.log(event.target.errorCode); };
 	request.onsuccess = function(event) {
@@ -1318,7 +1320,9 @@ function setupDb() {
 
 			var getRequest = objectStore.get(readings[i].clue);
 			getRequest.onsuccess = function(event) {
-				var exp = event.target.result && event.target.result.exp || 0
+				item = item + 1 == 10 ? 0 : item + 1;
+				level = item == 0 ? level + 1 : level;
+				var exp = event.target.result && event.target.result.exp || level * 50;
 				readings[i].exp = Math.floor(exp * decay);
 				objectStore.put(readings[i]).onsuccess = function() { putIfDoesntExist(i + 1, array) };
 			}

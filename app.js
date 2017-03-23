@@ -25,11 +25,11 @@ function annoy(answerRef) {
 function updateDomWithQuestion(answerRef) {
 	chrome.runtime.sendMessage({action: "prompt"}, function(response) {
 		document.getElementById("hey-listen").focus()
-		document.getElementById("fact").innerHTML = response.clue;
-		document.getElementById("mnemonic").innerHTML = response.mnemonic;
+		document.getElementById("hl-fact").innerHTML = response.clue;
+		document.getElementById("hl-mnemonic").innerHTML = response.mnemonic;
 
 		for (var i = 0; i < response.choices.length; i++) {
-			document.getElementById("btn" + i).innerHTML = response.choices[i];
+			document.getElementById("hl-btn" + i).innerHTML = response.choices[i];
 		}
 
 		answerRef.answer = response.answer;
@@ -39,10 +39,10 @@ function updateDomWithQuestion(answerRef) {
 
 function reset(answerRef) {
 	for (var i = 0; i < 4; i++) {
-		document.getElementById("btn" + i).disabled = false;
+		document.getElementById("hl-btn" + i).disabled = false;
 	}
 	document.getElementById("hey-listen").style.display = "none";
-	document.getElementById("mnemonic").style.display = "none";
+	document.getElementById("hl-mnemonic").style.display = "none";
 	annoy(answerRef, answerRef.delay)
 	answerRef.attempts = 0;
 }
@@ -60,17 +60,17 @@ function solved(answerRef) {
 }
 
 function makeAttempt(guessIndex, answerRef) {
-	var guess = document.getElementById("btn" + guessIndex).innerText;
+	var guess = document.getElementById("hl-btn" + guessIndex).innerText;
 	if (guess === answerRef.answer) {
 		solved(answerRef);
 		reset(answerRef);
 	} else {
-		document.getElementById("btn" + guessIndex).disabled = true;
+		document.getElementById("hl-btn" + guessIndex).disabled = true;
 		answerRef.attempts++;
 	}
 
 	if (answerRef.attempts > 1) {
-		document.getElementById("mnemonic").style.display = "initial";
+		document.getElementById("hl-mnemonic").style.display = "initial";
 	}
 }
 
@@ -86,10 +86,15 @@ function addInputHandlers(answerRef) {
 	});
 
 	for (var i = 0; i < 4; i++) {
-		var btn = document.getElementById("btn" + i);
+		var btn = document.getElementById("hl-btn" + i);
 		function closure(i) { return function() { makeAttempt(i, answerRef); } }
 		btn.addEventListener("click", closure(i));
 	}
+
+	document.getElementById("hl-show-mnemonic").addEventListener("click", function() {
+		answerRef.attempts = 100;
+		document.getElementById("hl-mnemonic").style.display = "initial";
+	});
 }
 
 function injectHtmlOverlay() {

@@ -1339,7 +1339,7 @@ function setupDb() {
 function setupMessageHandler() {
 	chrome.runtime.onMessage.addListener(
 		function(request, sender, sendResponse) {
-			console.log(request)
+			console.log(request);
 			if (request.action === "prompt") {
 			    makeQuestion(sendResponse);
 			    return true;

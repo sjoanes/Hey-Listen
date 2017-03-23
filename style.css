@@ -8,16 +8,17 @@
     background-color: #42A5F5;
     font-family: "Roboto", sans-serif;
     overflow-y: hidden;
+    line-height: normal;
 }
 
-#hey-listen .container {
+#hey-listen .hl-container {
     text-align: center;
     max-width: 1600px;
     margin: 0 auto;
     background-color: #42A5F5;
 }
 
-#hey-listen .fact, #hey-listen button {
+#hey-listen .hl-fact, #hey-listen button {
     background-color: #2196F3;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
     border: none;
@@ -25,26 +26,26 @@
     color: #ffffff;
 }
 
-#hey-listen .fact {
+#hey-listen .hl-fact {
     margin: 40px;
 }
 
-#hey-listen #answers {
+#hey-listen #hl-answers {
     margin: 20px 40px;
 }
 
-#hey-listen #fact {
+#hey-listen #hl-fact {
     font-size: 250px;
     text-shadow: 5px 2px 0px #282222;
 }
 
-#hey-listen #answers button:disabled {
+#hey-listen #hl-answers button:disabled {
     box-shadow: 0 0 !important;
     transition: box-shadow 0.1s;
     background: #BDBDBD;
 }
 
-#hey-listen #answers button {
+#hey-listen #hl-answers button {
     width: 23%;
     height: 50px;
     padding: 15px;
@@ -53,19 +54,21 @@
     transition: box-shadow 0.1s;
 }
 
-#hey-listen #answers button:last-child {
+#hey-listen #hl-answers button:last-child {
     margin-right: 0;
 }
 
-#hey-listen #answers button:hover {
+#hey-listen #hl-answers button:hover {
     box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
 }
 
-#hey-listen #show-mnemonic {
+#hey-listen #hl-show-mnemonic {
     border-radius: 100%;
+    width: 30px;
+    height: 30px;
 }
 
-#hey-listen #mnemonic {
+#hey-listen #hl-mnemonic {
     margin: 40px;
     font-size: 17px;
     display: none;

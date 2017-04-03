@@ -1289,19 +1289,6 @@ function gainExperience(clue, attempts) {
 	}
 }
 
-function getDecayFactor(now) {
-	var lastUpdate = localStorage.getItem("lastUpdate");
-	var timeElasped = now - lastUpdate;
-	var MILLI_IN_DAY = 86400000;
-
-	if (timeElasped > MILLI_IN_DAY) {
-		localStorage.setItem('lastUpdate', now);
-		return Math.pow(0.9, Math.floor(timeElasped / MILLI_IN_DAY));
-	} else {
-		return 1;
-	}
-}
-
 function setupDb() {
 	var item = 0;
 	var level = 0;
@@ -1310,7 +1297,6 @@ function setupDb() {
 	request.onsuccess = function(event) {
 		db = request.result;
 
-		var decay = getDecayFactor(Date.now());
 		var objectStore = db.transaction(["readings"], "readwrite").objectStore("readings");
 		putIfDoesntExist(0, readings, objectStore);
 
@@ -1322,8 +1308,7 @@ function setupDb() {
 			getRequest.onsuccess = function(event) {
 				item = item + 1 == 10 ? 0 : item + 1;
 				level = item == 0 ? level + 1 : level;
-				var exp = event.target.result && event.target.result.exp || level * 50;
-				readings[i].exp = Math.floor(exp * decay);
+				readings[i].exp = event.target.result && event.target.result.exp || level * 50;
 				objectStore.put(readings[i]).onsuccess = function() { putIfDoesntExist(i + 1, array) };
 			}
 		}

@@ -8,3 +8,4 @@ Gamify other people's websites using a chrome extension.
 2. Add list of dependency characters, auto adjust exp levels
 3. Icon for the extension
 4. make the option page more pretty (css and interface for regex)
+5. Improve streak -> maybe bayesian learning is better

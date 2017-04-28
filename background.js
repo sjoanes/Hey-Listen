@@ -1284,7 +1284,9 @@ function gainExperience(clue, attempts) {
 	getRequest.onsuccess = function (event) {
 		var updated = getRequest.result;
 		var failAttempts = attempts == 1 ? Math.floor((Math.random() * 2) % 2) : attempts; // assume %50 of 1 failed attempts are misinputs
-        updated.exp += 4 - Math.min(3, failAttempts);
+
+        updated.streak = failAttempts ? 0 : (updated.streak || 0) + 1;
+        updated.exp += Math.floor(Math.log2(updated.streak + 2)) * (4 - Math.min(3, failAttempts));
         objectStore.put(updated);
 	}
 }
@@ -1301,6 +1303,7 @@ function setupDb() {
 		putIfDoesntExist(0, readings, objectStore);
 
 		// this updates the vocabulary list without touching the experience(exp) values
+		// Also initializes each item with experience so the user is exposed to new items in chunks
 	    function putIfDoesntExist(i, array, store) {
 			if (i >= array.length) return;
 
@@ -1343,11 +1346,6 @@ function setupMessageHandler() {
 function init() {
 	setupDb();
 	setupMessageHandler();
-
-	// initialize time tracking
-	if (!localStorage.getItem("lastUpdate")) {
-		localStorage.setItem("lastUpdate", Date.now())
-	}
 }
 
 init();

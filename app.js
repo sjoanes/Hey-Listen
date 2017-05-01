@@ -75,6 +75,7 @@ function makeAttempt(guessIndex, answerRef) {
 }
 
 function addInputHandlers(answerRef) {
+	// keyboard hotkeys
 	document.addEventListener("keypress", function(event) {
 		var adjusted = event.keyCode === 65 ? 0 :     	// a
 					   event.keyCode === 83 ? 1 : 		// s
@@ -85,15 +86,23 @@ function addInputHandlers(answerRef) {
 		}
 	});
 
+	// clicking on answer buttons
 	for (var i = 0; i < 4; i++) {
 		var btn = document.getElementById("hl-btn" + i);
 		function closure(i) { return function() { makeAttempt(i, answerRef); } }
 		btn.addEventListener("click", closure(i));
 	}
 
+	// show hint
 	document.getElementById("hl-show-mnemonic").addEventListener("click", function() {
 		answerRef.attempts = 100;
 		document.getElementById("hl-mnemonic").style.display = "initial";
+	});
+
+	// Go to options page
+	var url = chrome.extension.getURL("options.html");
+	document.getElementById("hl-goto-options").addEventListener("click", function() {
+		window.open(url);
 	});
 }
 

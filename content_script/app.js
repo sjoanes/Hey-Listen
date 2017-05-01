@@ -3,7 +3,7 @@ initialize();
 function initialize() {
 	chrome.runtime.sendMessage({action: "init"}, function(response) {
 		if (response.isFirstTime) {
-			window.open(chrome.extension.getURL("options.html"));
+			window.open(chrome.extension.getURL("option_page/options.html"));
 		}
 
 		if (!(new RegExp(response.whitelist, "i").test(window.location.href))) {
@@ -104,7 +104,7 @@ function addInputHandlers(answerRef) {
 	});
 
 	// Go to options page
-	var url = chrome.extension.getURL("options.html");
+	var url = chrome.extension.getURL("option_page/options.html");
 	document.getElementById("hl-goto-options").addEventListener("click", function() {
 		window.open(url);
 	});
@@ -113,7 +113,7 @@ function addInputHandlers(answerRef) {
 function injectHtmlOverlay() {
 	var wrapper = document.createElement("div");
 	var xhttp = new XMLHttpRequest();
-	xhttp.open("GET", chrome.extension.getURL("app.html"), false);
+	xhttp.open("GET", chrome.extension.getURL("content_script/app.html"), false);
 	xhttp.send();
 	wrapper.innerHTML = xhttp.responseText;
 	wrapper.setAttribute("id", "hey-listen")
@@ -122,7 +122,7 @@ function injectHtmlOverlay() {
 
 function injectCss() {
 	var link = document.createElement("link");
-	link.href = chrome.extension.getURL("style.css");
+	link.href = chrome.extension.getURL("content_script/style.css");
 	link.type = "text/css";
 	link.rel = "stylesheet";
 	document.head.appendChild(link);

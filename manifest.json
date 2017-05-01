@@ -1,17 +1,17 @@
 {
     "manifest_version": 2,
     "content_scripts": [ {
-        "js": ["app.js"],
-        "css": ["style.css"],
+        "js": ["content_script/app.js"],
+        "css": ["content_script/style.css"],
         "matches": ["<all_urls>"]
     } ],
     "description": "Learn kanji while you procrastinate",
     "name": "Hey Listen",
     "version": "1.0.1",
-    "web_accessible_resources": ["app.html", "style.css", "options.js", "options.html"],
-    "options_page": "options.html",
+    "web_accessible_resources": ["content_script/app.html", "content_script/style.css", "options_page/options.js", "options_page/options.html"],
+    "options_page": "options_page/options.html",
     "background": {
-        "scripts": ["bg/facts.js", "bg/background.js"]
+        "scripts": ["bg_script/facts.js", "bg_script/background.js"]
     },
     "icons": { "48": "icon.png" }
 }

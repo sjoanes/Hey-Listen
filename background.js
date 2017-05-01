@@ -1333,7 +1333,7 @@ function setupMessageHandler() {
 			    return true;
 			} else if (request.action === "init") {
 				sendResponse({
-					whitelist: localStorage.getItem("whitelist") || 'x',
+					whitelist: makeRegex(localStorage.getItem("whitelist")),
 					delay: localStorage.getItem("delay") || 10
 				});
 			} else if (request.action === "solved") {
@@ -1341,6 +1341,10 @@ function setupMessageHandler() {
 			}
 		}
 	);
+}
+
+function makeRegex(whitelist) {
+	return whitelist ? "(http://|https://)www\.(" + whitelist.split(",").join('|') + ")\." : "a^";
 }
 
 function init() {

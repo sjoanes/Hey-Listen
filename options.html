@@ -22,16 +22,11 @@
 		    margin: 30px 0;
 		    width: 600px;
 		}
-		.regex-example {
-			display: none;
-			font-size: 15px;
-		}
 	</style>
 </head>
 <body>
-	<p>Specify regex<a href="#" id="showRegex">?</a> for the websites this extension should work on:</p>
-	<p id="regex" class="regex-example">Regex is a not so fancy way to describe patterns of letters (like a URL). Instead of explaining the gory details, you can use this example as a template. If you wanted this extension to run on youtube, reddit and facebook you could use the regex <code style="background: lightgrey;">.*reddit|facebook|youtube.*</code></p>
-	<textarea id="whitelist"></textarea>
+	<p>Specify a list of website this extension should work on separated by commas:</p>
+	<textarea id="whitelist" placeholder="reddit,youtube,facebook"></textarea>
 	<p>Specify the number of seconds between prompts:</p>
 	<input id="delay" type="number"/>
 	<button id="save">Save All</button>

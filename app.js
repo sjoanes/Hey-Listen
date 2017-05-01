@@ -2,6 +2,10 @@ initialize();
 
 function initialize() {
 	chrome.runtime.sendMessage({action: "init"}, function(response) {
+		if (response.isFirstTime) {
+			window.open(chrome.extension.getURL("options.html"));
+		}
+
 		if (!(new RegExp(response.whitelist, "i").test(window.location.href))) {
 			return;
 		}

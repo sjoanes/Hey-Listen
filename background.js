@@ -1333,6 +1333,7 @@ function setupMessageHandler() {
 			    return true;
 			} else if (request.action === "init") {
 				sendResponse({
+					isFirstTime: isFirstTime(),
 					whitelist: makeRegex(localStorage.getItem("whitelist")),
 					delay: localStorage.getItem("delay") || 10
 				});
@@ -1341,6 +1342,13 @@ function setupMessageHandler() {
 			}
 		}
 	);
+}
+
+function isFirstTime() {
+	var isFirstTime = localStorage.getItem("isFirstTime") === null;
+	localStorage.setItem("isFirstTime", false);
+
+	return isFirstTime;
 }
 
 function makeRegex(whitelist) {

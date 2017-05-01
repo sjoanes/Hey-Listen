@@ -7,7 +7,7 @@
     } ],
     "description": "Learn kanji while you procrastinate",
     "name": "Hey Listen",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "web_accessible_resources": ["app.html", "style.css", "options.js", "options.html"],
     "options_page": "options.html",
     "background": {

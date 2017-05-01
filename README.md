@@ -25,5 +25,4 @@ Sort of, you can control the amount of time between prompts on the same page. Go
 5. Improve streak -> maybe bayesian learning is better
 6. Highlight the correct answer better when the user gets it wrong
 7. Global timer for prompts
-8. Make it waaay easier to get started
 9. Add romanization option

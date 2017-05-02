@@ -22,6 +22,11 @@ function makeQuestion(callback) {
         	var options = getRandomOptions(readings);
         	options[randomIndex(options)] = question.answer;
 
+        	if (localStorage.getItem('answer_mode') === 'romanji') {
+        		options = options.map(wanakana.toRomaji);
+        		question.answer = wanakana.toRomaji(question.answer)
+        	}
+
             callback({
 				clue: question.clue,
 				choices: options,

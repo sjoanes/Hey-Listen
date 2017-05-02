@@ -13,7 +13,7 @@
 		    width:  600px;
 		    height: 30px;
 		}
-		input {
+		textarea, input[type="number"] {
 			width: 600px;
 			height: 30px;
 		}
@@ -30,6 +30,9 @@
 	<textarea id="whitelist" placeholder="reddit,youtube,facebook"></textarea>
 	<p>Specify the number of seconds between prompts:</p>
 	<input id="delay" type="number"/>
+	<p>What characters should be used for the multiple choice:</p>
+	<input id="romanji" type="radio" name="answer_mode" value="romanji"> English<br>
+	<input id="hira" type="radio" name="answer_mode" value="hira"> Hiragana<br>
 	<button id="save">Save All</button>
 </body>
 </html>

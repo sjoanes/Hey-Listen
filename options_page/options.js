@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 	document.getElementById("whitelist").value = localStorage.getItem('whitelist') || '';
-	document.getElementById("delay").value = localStorage.getItem('delay') || 10;
+	document.getElementById("delay").value = localStorage.getItem('delay') || 20;
 
 	if (localStorage.getItem('answer_mode') === 'romanji') {
 		document.getElementById("romanji").checked = true;

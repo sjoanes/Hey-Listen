@@ -3,7 +3,7 @@ initialize();
 function initialize() {
 	chrome.runtime.sendMessage({action: "init"}, function(response) {
 		if (response.isFirstTime) {
-			window.open(chrome.extension.getURL("option_page/options.html"));
+			window.open(chrome.extension.getURL("options_page/options.html"));
 		}
 
 		if (!(new RegExp(response.whitelist, "i").test(window.location.href))) {
@@ -11,10 +11,12 @@ function initialize() {
 		}
 
 		var answerRef = {attempts: 0, delay: response.delay};
-		injectHtmlOverlay();
-		injectCss();
-		addInputHandlers(answerRef);
-		updateDomWithQuestion(answerRef);
+		setTimeout(function() {
+			injectHtmlOverlay();
+			injectCss();
+			addInputHandlers(answerRef);
+			updateDomWithQuestion(answerRef);
+		}, response.initialDelay * 1000);
 	});
 }
 
@@ -104,7 +106,7 @@ function addInputHandlers(answerRef) {
 	});
 
 	// Go to options page
-	var url = chrome.extension.getURL("option_page/options.html");
+	var url = chrome.extension.getURL("options_page/options.html");
 	document.getElementById("hl-goto-options").addEventListener("click", function() {
 		window.open(url);
 	});

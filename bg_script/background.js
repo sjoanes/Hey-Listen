@@ -88,7 +88,10 @@ function setupDb() {
 	};
 }
 
+
 function setupMessageHandler() {
+	var lastUpdate = Date.now();
+
 	chrome.runtime.onMessage.addListener(
 		function(request, sender, sendResponse) {
 			console.log(request);
@@ -96,13 +99,19 @@ function setupMessageHandler() {
 			    makeQuestion(sendResponse);
 			    return true;
 			} else if (request.action === "init") {
+				var fullDelay = localStorage.getItem("delay") || 10;
+				var initialDelay = Math.max(fullDelay - ((Date.now() - lastUpdate)/1000), 0);
+				console.log(initialDelay);
+
 				sendResponse({
 					isFirstTime: isFirstTime(),
 					whitelist: makeRegex(localStorage.getItem("whitelist")),
-					delay: localStorage.getItem("delay") || 10
+					delay: fullDelay,
+					initialDelay: Math.min(fullDelay, initialDelay)
 				});
 			} else if (request.action === "solved") {
 				gainExperience(request.clue, request.attempts);
+				lastUpdate = Date.now();
 			}
 		}
 	);

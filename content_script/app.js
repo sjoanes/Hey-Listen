@@ -27,19 +27,24 @@ function annoy(answerRef) {
 	}, answerRef.delay * 1000);
 }
 
+function putInContext(char, context) {
+	return char + context;
+}
+
 // This will get a question from the background script and update the DOM
 function updateDomWithQuestion(answerRef) {
 	chrome.runtime.sendMessage({action: "prompt"}, function(response) {
 		document.getElementById("hey-listen").focus()
-		document.getElementById("hl-fact").innerHTML = response.clue;
+		document.getElementById("hl-fact").innerHTML = putInContext(response.clue, response.context);
 		document.getElementById("hl-mnemonic").innerHTML = response.mnemonic;
 
 		for (var i = 0; i < response.choices.length; i++) {
-			document.getElementById("hl-btn" + i).innerHTML = response.choices[i];
+			document.getElementById("hl-btn" + i).innerHTML = putInContext(response.choices[i], response.context);
 		}
 
 		answerRef.answer = response.answer;
 		answerRef.clue = response.clue;
+		answerRef.context = response.context;
 	});
 }
 
@@ -67,7 +72,7 @@ function solved(answerRef) {
 
 function makeAttempt(guessIndex, answerRef) {
 	var guess = document.getElementById("hl-btn" + guessIndex).innerText;
-	if (guess === answerRef.answer) {
+	if (guess === putInContext(answerRef.answer, answerRef.context)) {
 		solved(answerRef);
 		reset(answerRef);
 	} else {

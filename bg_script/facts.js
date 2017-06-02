@@ -3,60 +3,44 @@ var READING = "READING";
 
 var readings = [
 	{
-		clue: "年",
-		answer: "ねん",
-		hint: "NENtendo comes up with great content every YEAR."
-	},
-	{
 		clue: "食",
+		context: "べる",
 		answer: "た",
 		hint: 'You eat on a TAble. You only eat when you have a good(良) roof over your head'
 	},
 	{
-		clue: "林",
-		answer: "りん",
-		hint: "Rinninninnin RIN nininn is the sound of a chainsaw cutting down a <strong>forest</strong>"
-	},
-	{
 		clue: "雨",
+		context: "",
 		answer: "あめ",
 		hint: 'The ticks are rain. Thank God, AMEn, we have a roof!'
 	},
 	{
 		clue: "長",
+		context: "い",
 		answer: "なが",
 		hint: 'The naga have long tails with spades at the end'
 	},
 	{
-		clue: "夕",
-		answer: "ゆう",
-		hint: 'Who added that extra line to you ク to make タ? YUU did.'
-	},
-	{
-		clue: "名",
-		answer: "めい",
-		hint: 'Who is that standing on the ice wall? Its Mei'
-	},
-	{
-		clue: "文 ",
-		answer: "ぶん",
-		hint: 'That doll has a BUN hair style'
-	},
-	{
 		clue: "町",
+		context: "",
 		answer: "まち",
 		hint: 'The MACHIne moves it from the rice paddy to town.'
 	},
 	{
 		clue: "竹",
+		context: "",
 		answer: "たけ",
 		hint: '"take"-out food always has bamboo in it'
 	},
-		{
+	{
 		clue: "古",
+		context: "い",
 		answer: "ふる",
 		hint: "furu"
-	},
+	}
+
+	/*
+	,
 	{
 		clue: "吾",
 		answer: "わが",
@@ -1237,4 +1221,5 @@ var meanings = [
 		answer: "grain",
 		hint: "tree with a slanty hat is grain."
 	}
+	*/
 ];

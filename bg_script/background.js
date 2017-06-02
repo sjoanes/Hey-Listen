@@ -29,6 +29,7 @@ function makeQuestion(callback) {
 
             callback({
 				clue: question.clue,
+				context: question.context,
 				choices: options,
 				answer: question.answer,
 				mnemonic: question.hint
@@ -101,7 +102,6 @@ function setupMessageHandler() {
 			} else if (request.action === "init") {
 				var fullDelay = localStorage.getItem("delay") || 10;
 				var initialDelay = Math.max(fullDelay - ((Date.now() - lastUpdate)/1000), 0);
-				console.log(initialDelay);
 
 				sendResponse({
 					isFirstTime: isFirstTime(),

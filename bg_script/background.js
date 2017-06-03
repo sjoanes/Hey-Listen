@@ -125,7 +125,7 @@ function isFirstTime() {
 }
 
 function makeRegex(whitelist) {
-	return whitelist ? "(http://|https://)www\.(" + whitelist.split(",").join('|') + ")\." : "a^";
+	return whitelist ? "(http://|https://)(www\.)*(" + whitelist.split(",").join('|') + ")\." : "a^";
 }
 
 function init() {

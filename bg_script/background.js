@@ -50,7 +50,7 @@ function gainExperience(clue, attempts) {
 		var updated = getRequest.result;
 		var failAttempts = attempts == 1 ? Math.floor((Math.random() * 2) % 2) : attempts; // assume %50 of 1 failed attempts are misinputs
 
-        updated.streak = failAttempts ? 0 : (updated.streak || 0) + 1;
+        updated.streak = failAttempts ? 1 : (updated.streak || 0) + 1;
         updated.exp += updated.streak * (4 - Math.min(3, failAttempts));
         objectStore.put(updated);
 	}

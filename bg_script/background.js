@@ -59,7 +59,7 @@ function gainExperience(clue, attempts) {
 function setupDb() {
 	var item = 0;
 	var level = 0;
-	var request = window.indexedDB.open("factbank", 1);
+	var request = window.indexedDB.open("factbank", 4);
 	request.onerror = function(event) { console.log(event.target.errorCode); };
 	request.onsuccess = function(event) {
 		db = request.result;
@@ -84,7 +84,12 @@ function setupDb() {
 
 	request.onupgradeneeded = function(event) {
 	    db = event.target.result;
-	    var store = db.createObjectStore('readings', {keyPath: 'clue'});
+
+	    if (event.oldVersion !== 0) {
+			db.deleteObjectStore('readings');
+	    }
+
+    	var store = db.createObjectStore('readings', {keyPath: 'clue'});
 		store.createIndex("exp", "exp", { unique: false });
 	};
 }
